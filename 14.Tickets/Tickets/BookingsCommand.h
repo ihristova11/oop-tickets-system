@@ -4,7 +4,7 @@
 class BookingsCommand : public ICommand
 {
 	// Inherited via ICommand
-	virtual void execute() override;
+	virtual void execute(std::vector<std::string>) override;
 };
 
 #endif // !BOOKINGS_COMMAND_H

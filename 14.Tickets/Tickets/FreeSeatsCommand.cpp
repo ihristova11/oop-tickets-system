@@ -1,5 +1,5 @@
 #include "FreeSeatsCommand.h"
 
-void FreeSeatsCommand::execute()
+void FreeSeatsCommand::execute(std::vector<std::string> parameters)
 {
 }

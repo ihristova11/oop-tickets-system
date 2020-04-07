@@ -1,5 +1,5 @@
 #include "UnbookCommand.h"
 
-void UnbookCommand::execute()
+void UnbookCommand::execute(std::vector<std::string> parameters)
 {
 }

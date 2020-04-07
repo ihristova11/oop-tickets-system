@@ -1,5 +1,5 @@
 #include "BookingsCommand.h"
 
-void BookingsCommand::execute()
+void BookingsCommand::execute(std::vector<std::string> parameters)
 {
 }

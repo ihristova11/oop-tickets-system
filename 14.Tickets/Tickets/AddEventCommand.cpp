@@ -1,6 +1,6 @@
 #include "AddEventCommand.h"
 
-void AddEventCommand::execute()
+void AddEventCommand::execute(std::vector<std::string> parameters)
 {
 	// do something
 }

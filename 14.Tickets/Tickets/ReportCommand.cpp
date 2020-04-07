@@ -1,5 +1,5 @@
 #include "ReportCommand.h"
 
-void ReportCommand::execute()
+void ReportCommand::execute(std::vector<std::string> parameters)
 {
 }

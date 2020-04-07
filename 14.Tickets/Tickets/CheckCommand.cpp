@@ -1,5 +1,5 @@
 #include "CheckCommand.h"
 
-void CheckCommand::execute()
+void CheckCommand::execute(std::vector<std::string> parameters)
 {
 }

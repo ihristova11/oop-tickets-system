@@ -156,6 +156,7 @@
     <ClCompile Include="BookingsCommand.cpp" />
     <ClCompile Include="BuyCommand.cpp" />
     <ClCompile Include="CheckCommand.cpp" />
+    <ClCompile Include="CommandParser.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="FreeSeatsCommand.cpp" />
     <ClCompile Include="ReportCommand.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="BookingsCommand.h" />
     <ClInclude Include="BuyCommand.h" />
     <ClInclude Include="CheckCommand.h" />
+    <ClInclude Include="CommandParser.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Hall.h" />
     <ClInclude Include="ICommand.h" />

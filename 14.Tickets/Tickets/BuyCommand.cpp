@@ -1,5 +1,5 @@
 #include "BuyCommand.h"
 
-void BuyCommand::execute()
+void BuyCommand::execute(std::vector<std::string> parameters)
 {
 }

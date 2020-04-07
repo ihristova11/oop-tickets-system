@@ -5,7 +5,7 @@
 class FreeSeatsCommand : public ICommand
 {
 	// Inherited via ICommand
-	virtual void execute() override;
+	virtual void execute(std::vector<std::string>) override;
 };
 
 #endif // !FREE_SEATS_COMMAND_H
