@@ -3,7 +3,8 @@
 
 #include <string>
 #include "IEngine.h"
-#include "CommandParser.h"
+#include "ICommandParser.h"
+#include "Hall.h"
 
 class Engine : IEngine
 {
@@ -12,12 +13,11 @@ public:
 	virtual void start() override;
 
 	// getter
-	CommandParser getParser() const;
+	const ICommandParser* getParser() const;
 private:
-	const std::string TerminationCommand = "exit";
-
-	CommandParser parser;
+	ICommandParser* parser;
 	void processCommand(std::string commandAsString);
+	std::vector<Hall> seed();
 };
 
 #endif // !ENGINE_H
