@@ -18,4 +18,4 @@ sudo: false
 language: cpp
 
 script: 
-    - cmake .
+    - cmake ..\14.Tickets\Tickets
