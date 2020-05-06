@@ -15,7 +15,12 @@ std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 	{
 		if (this->halls[i]->getId() == hallId)
 		{
+			// check if no event at that time
 			this->halls[i]->addEvent(date, name);
+		}
+		else
+		{
+			// print message for no such hall | update flag or result string
 		}
 	}
 

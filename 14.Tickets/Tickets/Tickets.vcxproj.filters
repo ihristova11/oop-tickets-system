@@ -28,15 +28,21 @@
     <Filter Include="Source Files\Commands\FileCommands">
       <UniqueIdentifier>{d80801ca-fafc-4553-8221-4437a7fafcdf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\CommandParser">
+      <UniqueIdentifier>{9d48029e-58bf-404a-b66c-624f8a90157c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{654b45f0-b7cd-4778-82e6-7f4171dc089d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CommandParser">
+      <UniqueIdentifier>{769c7ad8-8a46-4968-84fa-eaaa259c94e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{d664c9a3-457b-4af9-8010-0cf8be30f416}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Startup.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CommandParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Event.cpp">
@@ -90,24 +96,15 @@
     <ClCompile Include="Hall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CommandParser.cpp">
+      <Filter>Source Files\CommandParser</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ICommand.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Hall.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CommandParser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ICommandParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Event.h">
@@ -160,6 +157,21 @@
     </ClInclude>
     <ClInclude Include="SaveCommand.h">
       <Filter>Header Files\Commands\FileCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommand.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommandParser.h">
+      <Filter>Header Files\CommandParser</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandParser.h">
+      <Filter>Header Files\CommandParser</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="IEngine.h">
+      <Filter>Header Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

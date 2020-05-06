@@ -8,7 +8,7 @@ class Event
 public:
 	Event(const std::string&, const std::string&);
 
-private:
+	// not sure if public is ok?
 	std::string name;
 	std::string date; // todo: refactor
 };
