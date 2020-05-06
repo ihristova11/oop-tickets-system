@@ -1,4 +1,3 @@
-#include "CommandType.h"
 #include "Engine.h"
 
 #include <string>
@@ -6,7 +5,7 @@
 
 void Engine::start()
 {
-	// void Seed(); // todo: seed file with halls and events
+	void seed(); // todo: seed file with halls and events
 
 	while (true)
 	{
@@ -33,7 +32,7 @@ void Engine::processCommand(std::string commandAsString)
 {
 	if (commandAsString.empty())
 		throw "Command cannot be empty!"; // should have a test for this
-	
+
 	ICommand* command = (this->parser)->parseCommand(commandAsString);
 
 	// todo: test it with values with spaces
@@ -42,5 +41,10 @@ void Engine::processCommand(std::string commandAsString)
 
 	std::string executionResult = command->execute(parameters);
 	std::cout << executionResult << std::endl;
+}
+
+std::vector<Hall> Engine::seed()
+{
+	return std::vector<Hall>();
 }
 

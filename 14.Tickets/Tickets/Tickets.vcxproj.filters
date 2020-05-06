@@ -83,9 +83,6 @@
     <ClInclude Include="ICommandParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CommandType.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
