@@ -1,5 +1,4 @@
 #include "AddEventCommand.h"
-#include "Constants.h"
 
 std::string AddEventCommand::execute(std::vector<std::string> parameters)
 {

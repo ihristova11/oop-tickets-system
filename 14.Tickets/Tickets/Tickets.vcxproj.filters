@@ -22,6 +22,12 @@
     <Filter Include="Header Files\Common">
       <UniqueIdentifier>{9b453539-c6a6-4af6-9f49-68a93ee8f5cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Commands\FileCommands">
+      <UniqueIdentifier>{f3feb2b4-03f8-47f7-8519-93a7364cd3bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Commands\FileCommands">
+      <UniqueIdentifier>{d80801ca-fafc-4553-8221-4437a7fafcdf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Startup.cpp">
@@ -62,6 +68,24 @@
     </ClCompile>
     <ClCompile Include="Ticket.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenCommand.cpp">
+      <Filter>Source Files\Commands\FileCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="CloseCommand.cpp">
+      <Filter>Source Files\Commands\FileCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitCommand.cpp">
+      <Filter>Source Files\Commands\FileCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpCommand.cpp">
+      <Filter>Source Files\Commands\FileCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveAsCommand.cpp">
+      <Filter>Source Files\Commands\FileCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveCommand.cpp">
+      <Filter>Source Files\Commands\FileCommands</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +139,24 @@
     </ClInclude>
     <ClInclude Include="Constants.h">
       <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenCommand.h">
+      <Filter>Header Files\Commands\FileCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="CloseCommand.h">
+      <Filter>Header Files\Commands\FileCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitCommand.h">
+      <Filter>Header Files\Commands\FileCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpCommand.h">
+      <Filter>Header Files\Commands\FileCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveAsCommand.h">
+      <Filter>Header Files\Commands\FileCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveCommand.h">
+      <Filter>Header Files\Commands\FileCommands</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

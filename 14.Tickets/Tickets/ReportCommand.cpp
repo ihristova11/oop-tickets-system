@@ -1,5 +1,4 @@
 #include "ReportCommand.h"
-#include "Constants.h"
 
 std::string ReportCommand::execute(std::vector<std::string> parameters)
 {

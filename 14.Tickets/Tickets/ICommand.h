@@ -1,5 +1,6 @@
 #ifndef ICOMMAND_H
 #define ICOMMAND_H
+#include "Constants.h"
 
 #include <vector>
 #include <string>

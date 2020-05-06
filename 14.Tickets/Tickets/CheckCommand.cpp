@@ -1,5 +1,4 @@
 #include "CheckCommand.h"
-#include "Constants.h"
 
 std::string CheckCommand::execute(std::vector<std::string> parameters)
 {
