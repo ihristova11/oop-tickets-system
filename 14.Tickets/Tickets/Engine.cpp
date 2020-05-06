@@ -1,6 +1,6 @@
 #include "Engine.h"
 #include <string>
-#include "CommandType.cpp"
+#include "CommandType.h"
 
 void Engine::start()
 {
