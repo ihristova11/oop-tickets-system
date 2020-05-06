@@ -2,15 +2,16 @@
 #define EVENT_H
 
 #include <string>
-
+#include "Hall.h"
 class Event
 {
 public:
-	Event(const std::string&, const std::string&);
+	Event(const std::string&, const std::string&, const Hall&);
 
 	// not sure if public is ok?
 	std::string name;
 	std::string date; // todo: refactor
+	Hall hall;
 };
 
 #endif // !EVENT_H

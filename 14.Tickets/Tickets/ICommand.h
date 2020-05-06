@@ -3,12 +3,14 @@
 #include "Constants.h"
 
 #include "Hall.h"
+#include "Receiver.h"
 #include <vector>
 #include <string>
 
 class ICommand
 {
 public:
+	Receiver receiver;
 	virtual std::string execute(const std::vector<std::string>&) = 0;
 	virtual std::string toString() = 0;
 };

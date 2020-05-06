@@ -11,10 +11,11 @@ class Engine : public IEngine
 public:
 	Engine();
 	virtual ~Engine();
-
+	Receiver receiver;
+	
 	virtual void start() override;
 private:
-	std::vector<Hall*> halls;
+
 	std::vector<ICommand*> commands;
 	ICommandParser* parser;
 

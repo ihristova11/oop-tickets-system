@@ -13,15 +13,17 @@ std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 	//find hall with that name
 	for (size_t i = 0; i < this->halls.size(); i++)
 	{
-		if (this->halls[i]->getId() == hallId)
-		{
-			// check if no event at that time
-			this->halls[i]->addEvent(date, name);
-		}
-		else
-		{
-			// print message for no such hall | update flag or result string
-		}
+		this->receiver.events.push_back(new Event(name, date, Hall(hallId)));
+		//if (this->halls[i]->getId() == hallId)
+		//{
+		//	// check if no event at that time
+		//	//this->halls[i]->addEvent(date, name);
+		//	this->receiver.halls[i]->addEvent(date, name);
+		//}
+		//else
+		//{
+		//	// print message for no such hall | update flag or result string
+		//}
 	}
 
 	return Constants::Success;
