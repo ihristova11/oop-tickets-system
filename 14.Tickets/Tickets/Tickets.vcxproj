@@ -162,6 +162,7 @@
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="ExitCommand.cpp" />
     <ClCompile Include="FreeSeatsCommand.cpp" />
+    <ClCompile Include="Hall.cpp" />
     <ClCompile Include="HelpCommand.cpp" />
     <ClCompile Include="OpenCommand.cpp" />
     <ClCompile Include="ReportCommand.cpp" />

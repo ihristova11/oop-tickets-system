@@ -1,6 +1,6 @@
 #include "BookingsCommand.h"
 
-std::string BookingsCommand::execute(std::vector<std::string> parameters)
+std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 {
 	return Constants::Success;
 }

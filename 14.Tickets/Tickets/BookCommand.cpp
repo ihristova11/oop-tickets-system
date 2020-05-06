@@ -1,6 +1,6 @@
 #include "BookCommand.h"
 
-std::string BookCommand::execute(std::vector<std::string> parameters)
+std::string BookCommand::execute(const std::vector<std::string>& parameters)
 {
 	return Constants::Success;
 }

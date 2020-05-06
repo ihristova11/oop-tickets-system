@@ -1,15 +1,16 @@
 #ifndef EVENT_H
 #define EVENT_H
 
-#include "Hall.h"
 #include <string>
 
 class Event
 {
+public:
+	Event(const std::string&, const std::string&);
+
 private:
-	Hall hall;
 	std::string name;
-	// todo: add date field
+	std::string date; // todo: refactor
 };
 
 #endif // !EVENT_H

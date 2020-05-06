@@ -1,6 +1,6 @@
 #include "OpenCommand.h"
 
-std::string OpenCommand::execute(std::vector<std::string>)
+std::string OpenCommand::execute(const std::vector<std::string>&)
 {
 	return Constants::Success;
 }

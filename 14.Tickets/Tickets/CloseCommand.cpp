@@ -1,6 +1,6 @@
 #include "CloseCommand.h"
 
-std::string CloseCommand::execute(std::vector<std::string>)
+std::string CloseCommand::execute(const std::vector<std::string>&)
 {
 	return Constants::Success;
 }

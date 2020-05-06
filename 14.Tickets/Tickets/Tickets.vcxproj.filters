@@ -87,6 +87,9 @@
     <ClCompile Include="SaveCommand.cpp">
       <Filter>Source Files\Commands\FileCommands</Filter>
     </ClCompile>
+    <ClCompile Include="Hall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ICommand.h">

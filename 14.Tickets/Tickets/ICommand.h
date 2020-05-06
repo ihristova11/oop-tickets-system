@@ -2,13 +2,14 @@
 #define ICOMMAND_H
 #include "Constants.h"
 
+#include "Hall.h"
 #include <vector>
 #include <string>
 
 class ICommand
 {
 public:
-	virtual std::string execute(std::vector<std::string>) = 0;
+	virtual std::string execute(const std::vector<std::string>&) = 0;
 	virtual std::string toString() = 0;
 };
 

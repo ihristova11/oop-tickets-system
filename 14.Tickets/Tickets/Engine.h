@@ -6,16 +6,15 @@
 #include "ICommandParser.h"
 #include "Hall.h"
 
-class Engine : IEngine
+class Engine : public IEngine
 {
 public:
+	Engine();
+	virtual ~Engine();
 
-	// Inherited via IEngine
 	virtual void start() override;
-
-	// getter
-	const ICommandParser* getParser() const;
 private:
+	std::vector<Hall*> halls;
 	std::vector<ICommand*> commands;
 	ICommandParser* parser;
 

@@ -1,6 +1,6 @@
 #include "FreeSeatsCommand.h"
 
-std::string FreeSeatsCommand::execute(std::vector<std::string> parameters)
+std::string FreeSeatsCommand::execute(const std::vector<std::string>& parameters)
 {
 	return Constants::Success;
 }

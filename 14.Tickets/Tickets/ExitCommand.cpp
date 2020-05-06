@@ -1,6 +1,6 @@
 #include "ExitCommand.h"
 
-std::string ExitCommand::execute(std::vector<std::string>)
+std::string ExitCommand::execute(const std::vector<std::string>&)
 {
 	return Constants::Success;
 }

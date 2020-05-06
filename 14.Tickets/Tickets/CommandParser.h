@@ -13,8 +13,8 @@ class CommandParser : public ICommandParser
 public:
 	CommandParser();
 
-	ICommand* parseCommand(const std::string&);
-	std::vector<std::string> parseParameters(const std::string&);
+	virtual ICommand* parseCommand(const std::string&) override;
+	virtual std::vector<std::string> parseParameters(const std::string&) override;
 private:
 	std::vector<ICommand*> commands;
 

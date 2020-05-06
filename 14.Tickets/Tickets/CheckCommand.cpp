@@ -1,6 +1,6 @@
 #include "CheckCommand.h"
 
-std::string CheckCommand::execute(std::vector<std::string> parameters)
+std::string CheckCommand::execute(const std::vector<std::string>& parameters)
 {
 	return Constants::Success;
 }

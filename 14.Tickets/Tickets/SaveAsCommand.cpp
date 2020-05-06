@@ -1,6 +1,6 @@
 #include "SaveAsCommand.h"
 
-std::string SaveAsCommand::execute(std::vector<std::string>)
+std::string SaveAsCommand::execute(const std::vector<std::string>&)
 {
 	return Constants::Success;
 }

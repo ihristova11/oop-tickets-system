@@ -1,6 +1,6 @@
 #include "ReportCommand.h"
 
-std::string ReportCommand::execute(std::vector<std::string> parameters)
+std::string ReportCommand::execute(const std::vector<std::string>& parameters)
 {
 	return Constants::Success;
 }

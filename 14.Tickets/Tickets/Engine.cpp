@@ -2,9 +2,20 @@
 
 #include <string>
 #include <iostream>
+#include "CommandParser.h"
+Engine::Engine()
+{
+	this->parser = new CommandParser();
+}
+
+Engine::~Engine()
+{
+	delete this->parser;
+}
 
 void Engine::start()
 {
+	// try catch ?
 	void seed(); // todo: seed file with halls and events
 
 	while (true)
@@ -21,11 +32,6 @@ void Engine::start()
 			break;
 		}
 	}
-}
-
-const ICommandParser* Engine::getParser() const
-{
-	return this->parser;
 }
 
 void Engine::processCommand(std::string commandAsString)

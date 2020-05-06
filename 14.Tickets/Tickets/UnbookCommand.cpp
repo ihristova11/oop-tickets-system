@@ -1,6 +1,6 @@
 #include "UnbookCommand.h"
 
-std::string UnbookCommand::execute(std::vector<std::string> parameters)
+std::string UnbookCommand::execute(const std::vector<std::string>& parameters)
 {
 	return Constants::Success;
 }
