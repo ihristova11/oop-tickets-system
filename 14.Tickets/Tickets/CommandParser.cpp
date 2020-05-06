@@ -1,21 +1,49 @@
 #include "CommandParser.h"
 
-//ICommand CommandParser::parseCommand(std::string fullCommand) // todo: implement logic
-//{
-//	std::string commandName = split(fullCommand, ' ')[0];
-//
-//	switch (commandName)
-//	{
-//	case "exit":
-//		break;
-//	default:
-//		break;
-//	}
-//}
+#include "AddEventCommand.h"
+#include "FreeSeatsCommand.h"
+#include "BookCommand.h"
+#include "UnbookCommand.h"
+#include "BuyCommand.h"
+#include "BookingsCommand.h"
+#include "CheckCommand.h"
+#include "ReportCommand.h"
 
-std::vector<std::string> CommandParser::parseParameters(std::string fullCommand)
+CommandParser::CommandParser()
+{
+	this->seedCommands();
+}
+
+ICommand* CommandParser::parseCommand(const std::string& fullCommand)
+{
+	std::string commandName = this->split(fullCommand, ' ')[0];
+	ICommand* command = nullptr;
+	for (size_t i = 0; i < commands.size(); i++)
+	{
+		if ((this->commands[i])->toString() == commandName) // check if it works this way
+		{
+			command = this->commands[i];
+			break;
+		}
+	}
+	return command;
+}
+
+std::vector<std::string> CommandParser::parseParameters(const std::string& fullCommand)
 {
 	return split(fullCommand, ' ');
+}
+
+void CommandParser::seedCommands()
+{
+	this->commands.push_back(new AddEventCommand());
+	this->commands.push_back(new FreeSeatsCommand());
+	this->commands.push_back(new BookCommand());
+	this->commands.push_back(new UnbookCommand());
+	this->commands.push_back(new BuyCommand());
+	this->commands.push_back(new BookingsCommand());
+	this->commands.push_back(new CheckCommand());
+	this->commands.push_back(new ReportCommand());
 }
 
 template <typename Out>
@@ -31,8 +59,4 @@ std::vector<std::string> CommandParser::split(const std::string& s, char delim) 
 	std::vector<std::string> elems;
 	split(s, delim, std::back_inserter(elems));
 	return elems;
-}
-
-void CommandParser::findCommand(std::string commandName)
-{
 }

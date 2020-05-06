@@ -7,7 +7,7 @@
 class ICommand
 {
 public:
-	virtual void execute(std::vector<std::string>) = 0;
+	virtual std::string execute(std::vector<std::string>) = 0;
 	virtual std::string toString() = 0;
 };
 

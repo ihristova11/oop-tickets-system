@@ -1,8 +1,9 @@
 #include "ReportCommand.h"
 #include "Constants.h"
 
-void ReportCommand::execute(std::vector<std::string> parameters)
+std::string ReportCommand::execute(std::vector<std::string> parameters)
 {
+	return Constants::Success;
 }
 
 std::string ReportCommand::toString()

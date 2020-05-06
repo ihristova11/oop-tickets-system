@@ -11,15 +11,18 @@
 class CommandParser : public ICommandParser
 {
 public:
-	ICommand* parseCommand(std::string fullCommand); // should return command, may use reflection
-	std::vector<std::string> parseParameters(std::string fullCommand);
+	CommandParser();
+
+	ICommand* parseCommand(const std::string&);
+	std::vector<std::string> parseParameters(const std::string&);
 private:
-	void findCommand(std::string commandName); // probably use reflection here
+	std::vector<ICommand*> commands;
+
+	void seedCommands();
 
 	// https://stackoverflow.com/questions/236129/how-do-i-iterate-over-the-words-of-a-string
 	template <typename T>
 	void split(const std::string& s, char delim, T result);
-
 	std::vector<std::string> split(const std::string& s, char delim);
 };
 

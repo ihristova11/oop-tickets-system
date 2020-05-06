@@ -14,5 +14,6 @@ namespace Constants
 	const std::string CheckCommandName = "check";
 	const std::string ReportCommandName = "report";
 
+	const std::string Success = "Success!";
 }
 #endif // !CONSTANTS_H

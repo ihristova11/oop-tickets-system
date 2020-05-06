@@ -4,7 +4,7 @@
 
 int main()
 {
-	Engine engine; // should be an interface
+	Engine engine; // should be an interface | single instance
 	engine.start();
 
 	return 0;

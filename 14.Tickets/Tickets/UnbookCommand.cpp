@@ -1,8 +1,9 @@
 #include "UnbookCommand.h"
 #include "Constants.h"
 
-void UnbookCommand::execute(std::vector<std::string> parameters)
+std::string UnbookCommand::execute(std::vector<std::string> parameters)
 {
+	return Constants::Success;
 }
 
 std::string UnbookCommand::toString()

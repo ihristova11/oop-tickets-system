@@ -1,8 +1,9 @@
 #include "BuyCommand.h"
 #include "Constants.h"
 
-void BuyCommand::execute(std::vector<std::string> parameters)
+std::string BuyCommand::execute(std::vector<std::string> parameters)
 {
+	return Constants::Success;
 }
 
 std::string BuyCommand::toString()
