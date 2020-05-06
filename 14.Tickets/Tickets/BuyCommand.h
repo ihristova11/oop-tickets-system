@@ -6,6 +6,7 @@ class BuyCommand : public ICommand
 {
 	// Inherited via ICommand
 	virtual void execute(std::vector<std::string>) override;
+	virtual std::string toString() override;
 };
 
 #endif // !BUY_COMMAND_H

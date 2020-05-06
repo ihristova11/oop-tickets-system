@@ -1,4 +1,5 @@
 #include "AddEventCommand.h"
+#include "Constants.h"
 
 void AddEventCommand::execute(std::vector<std::string> parameters)
 {
@@ -7,4 +8,9 @@ void AddEventCommand::execute(std::vector<std::string> parameters)
 	std::string name = parameters[2];
 
 
+}
+
+std::string AddEventCommand::toString()
+{
+	return Constants::AddEventCommandName;
 }

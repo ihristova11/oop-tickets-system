@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Commands">
       <UniqueIdentifier>{89913813-2c3b-4902-af4c-210284078b1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{9b453539-c6a6-4af6-9f49-68a93ee8f5cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Startup.cpp">
@@ -112,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="Ticket.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files\Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

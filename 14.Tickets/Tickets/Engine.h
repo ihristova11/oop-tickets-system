@@ -9,13 +9,18 @@
 class Engine : IEngine
 {
 public:
+	Engine();
 	// Inherited via IEngine
 	virtual void start() override;
 
 	// getter
 	const ICommandParser* getParser() const;
 private:
+	std::vector<ICommand*> commands;
 	ICommandParser* parser;
+
+
+	void seedCommands();
 	void processCommand(std::string commandAsString);
 	std::vector<Hall> seed();
 };
