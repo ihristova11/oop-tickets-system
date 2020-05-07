@@ -7,9 +7,9 @@
 class BookCommand : public ICommand
 {
 public:
-	BookCommand(const Receiver&);
+	BookCommand(Receiver*);
 
-	Receiver receiver;
+	Receiver* receiver;
 
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;

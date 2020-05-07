@@ -5,9 +5,9 @@
 class UnbookCommand : public ICommand
 {
 public: 
-	UnbookCommand(const Receiver&);
+	UnbookCommand(Receiver*);
 
-	Receiver receiver;
+	Receiver* receiver;
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

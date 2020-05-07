@@ -2,8 +2,7 @@
 #include "Hall.h"
 #include "Event.h"
 
-AddEventCommand::AddEventCommand(const Receiver& receiver) : receiver(receiver) 
-// should be in base class? receiver?
+AddEventCommand::AddEventCommand(Receiver* receiver) : receiver(receiver)
 { }
 
 std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
@@ -12,7 +11,7 @@ std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 	int hallId = std::stoi(parameters[2]);
 	std::string eventName = parameters[3];
 
-	Hall* hall = this->receiver.getHallWithId(hallId);
+	Hall* hall = this->receiver->getHallWithId(hallId);
 
 	if (hall == nullptr)
 	{
@@ -22,10 +21,10 @@ std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 	}
 	else
 	{
-		if (this->receiver.getEvent(date, eventName) == nullptr)
+		if (this->receiver->getEvent(date, eventName) == nullptr)
 		{
 			// no such event at that time so we can create a new event
-			this->receiver.addEvent(date, eventName, hallId);
+			this->receiver->addEvent(date, eventName, hallId);
 		}
 		else
 		{

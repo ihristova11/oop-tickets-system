@@ -9,9 +9,9 @@
 #include "CheckCommand.h"
 #include "ReportCommand.h"
 
-CommandParser::CommandParser(const Receiver& receiver)
+CommandParser::CommandParser(Receiver* receiver)
 {
-	this->receiver = Receiver(receiver);
+	this->receiver = receiver;
 	this->seedCommands();
 }
 

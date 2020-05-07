@@ -4,8 +4,8 @@
 class BookingsCommand : public ICommand
 {
 public: 
-	BookingsCommand(const Receiver&);
-	Receiver receiver;
+	BookingsCommand(Receiver*);
+	Receiver* receiver;
 
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;

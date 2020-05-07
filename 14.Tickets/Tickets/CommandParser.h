@@ -11,9 +11,9 @@
 class CommandParser : public ICommandParser
 {
 public:
-	CommandParser(const Receiver&);
+	CommandParser(Receiver*);
 
-	Receiver receiver;
+	Receiver* receiver;
 
 	virtual ICommand* parseCommand(const std::string&) override;
 	virtual std::vector<std::string> parseParameters(const std::string&) override;

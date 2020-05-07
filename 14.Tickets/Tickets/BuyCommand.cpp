@@ -1,6 +1,6 @@
 #include "BuyCommand.h"
 
-BuyCommand::BuyCommand(const Receiver& receiver) : receiver(receiver)
+BuyCommand::BuyCommand(Receiver* receiver) : receiver(receiver)
 { }
 
 std::string BuyCommand::execute(const std::vector<std::string>& parameters)

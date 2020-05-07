@@ -7,7 +7,7 @@
 Engine::Engine()
 {
 	seed(); // todo: seed file with halls and events
-	this->parser = new CommandParser(this->receiver);
+	this->parser = new CommandParser(&this->receiver);
 }
 
 Engine::~Engine()
@@ -53,12 +53,13 @@ void Engine::processCommand(std::string commandAsString)
 	}
 	else
 	{
-		std::cout << Constants::Error << std::endl;
+		std::cout<<Constants::Error<<std::endl;
 	}
 }
 
 void Engine::seed()
 {
+	// for testing purposes
 	this->receiver.halls.push_back(Hall(1));
 	this->receiver.halls.push_back(Hall(2));
 	this->receiver.halls.push_back(Hall(3));

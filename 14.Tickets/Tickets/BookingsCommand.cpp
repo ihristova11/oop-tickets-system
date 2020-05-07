@@ -1,6 +1,6 @@
 #include "BookingsCommand.h"
 
-BookingsCommand::BookingsCommand(const Receiver& receiver) : receiver(receiver)
+BookingsCommand::BookingsCommand(Receiver* receiver) : receiver(receiver)
 { }
 
 std::string BookingsCommand::execute(const std::vector<std::string>& parameters)

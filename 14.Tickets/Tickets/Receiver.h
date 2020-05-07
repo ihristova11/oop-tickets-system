@@ -20,6 +20,7 @@ public:
 	Hall* getHallWithId(const int&);
 	Event* getEvent(const std::string&, const std::string&);
 	void addEvent(const std::string&, const std::string&, const int&);
+	bool checkCode(const std::string&);
 
 private:
 	void copyInternals(const Receiver&);
