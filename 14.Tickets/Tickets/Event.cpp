@@ -8,3 +8,9 @@ Event::Event(const std::string& name,
 	hall(Hall(hall)) 
 {
 }
+
+int Event::getFreeSeats()
+{
+	//this->hall // get free seats in a hall ( should maintain a record for that)
+	return 0;
+}

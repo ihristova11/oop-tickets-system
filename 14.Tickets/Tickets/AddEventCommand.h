@@ -6,7 +6,6 @@
 class AddEventCommand : public ICommand
 {
 public:
-	std::vector<Hall*> halls; // in base class
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

@@ -12,6 +12,9 @@ public:
 	std::string name;
 	std::string date; // todo: refactor
 	Hall hall;
+
+
+	int getFreeSeats();
 };
 
 #endif // !EVENT_H
