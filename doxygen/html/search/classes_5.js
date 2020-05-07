@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hall_22',['Hall',['../struct_hall.html',1,'']]]
+  ['hall_34',['Hall',['../class_hall.html',1,'']]],
+  ['helpcommand_35',['HelpCommand',['../class_help_command.html',1,'']]]
 ];

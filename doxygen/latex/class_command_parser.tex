@@ -9,11 +9,11 @@ Inheritance diagram for Command\+Parser\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_command_parser_ac9f7a2184eaf21b26490587427697aca}\label{class_command_parser_ac9f7a2184eaf21b26490587427697aca}} 
-\mbox{\hyperlink{class_i_command}{I\+Command}} $\ast$ {\bfseries parse\+Command} (std\+::string full\+Command)
+\mbox{\Hypertarget{class_command_parser_af0c976990c4288c7af9498c77cf8aad0}\label{class_command_parser_af0c976990c4288c7af9498c77cf8aad0}} 
+virtual \mbox{\hyperlink{class_i_command}{I\+Command}} $\ast$ {\bfseries parse\+Command} (const std\+::string \&) override
 \item 
-\mbox{\Hypertarget{class_command_parser_a8861d7723b1556f57cea751d852488a9}\label{class_command_parser_a8861d7723b1556f57cea751d852488a9}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries parse\+Parameters} (std\+::string full\+Command)
+\mbox{\Hypertarget{class_command_parser_a420ad8c4f3a5a3ea8278a5cb54e247f9}\label{class_command_parser_a420ad8c4f3a5a3ea8278a5cb54e247f9}} 
+virtual std\+::vector$<$ std\+::string $>$ {\bfseries parse\+Parameters} (const std\+::string \&) override
 \item 
 \mbox{\Hypertarget{class_command_parser_ac43c5524878390908c28797b6e40b9f9}\label{class_command_parser_ac43c5524878390908c28797b6e40b9f9}} 
 {\footnotesize template$<$typename Out $>$ }\\void {\bfseries split} (const std\+::string \&s, char delim, Out result)

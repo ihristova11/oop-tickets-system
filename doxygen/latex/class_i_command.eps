@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 676.691711
+%%BoundingBox: 0 0 500 1127.819580
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.738889 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.443333 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 9 def
+/rows 15 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -179,8 +179,14 @@ boxfont setfont
 (BookingsCommand) cw
 (BuyCommand) cw
 (CheckCommand) cw
+(CloseCommand) cw
+(ExitCommand) cw
 (FreeSeatsCommand) cw
+(HelpCommand) cw
+(OpenCommand) cw
 (ReportCommand) cw
+(SaveAsCommand) cw
+(SaveCommand) cw
 (UnbookCommand) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -193,20 +199,38 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (ICommand) 0.000000 8.000000 box
- (AddEventCommand) 1.000000 7.000000 box
- (BookCommand) 1.000000 6.000000 box
- (BookingsCommand) 1.000000 5.000000 box
- (BuyCommand) 1.000000 4.000000 box
- (CheckCommand) 1.000000 3.000000 box
- (FreeSeatsCommand) 1.000000 2.000000 box
- (ReportCommand) 1.000000 1.000000 box
+ (ICommand) 0.000000 14.000000 box
+ (AddEventCommand) 1.000000 13.000000 box
+ (BookCommand) 1.000000 12.000000 box
+ (BookingsCommand) 1.000000 11.000000 box
+ (BuyCommand) 1.000000 10.000000 box
+ (CheckCommand) 1.000000 9.000000 box
+ (CloseCommand) 1.000000 8.000000 box
+ (ExitCommand) 1.000000 7.000000 box
+ (FreeSeatsCommand) 1.000000 6.000000 box
+ (HelpCommand) 1.000000 5.000000 box
+ (OpenCommand) 1.000000 4.000000 box
+ (ReportCommand) 1.000000 3.000000 box
+ (SaveAsCommand) 1.000000 2.000000 box
+ (SaveCommand) 1.000000 1.000000 box
  (UnbookCommand) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 0.000000 7.250000 out
+1 0.000000 13.250000 out
+solid
+0 0.000000 13.500000 hedge
+solid
+0 0.000000 12.500000 hedge
+solid
+0 0.000000 11.500000 hedge
+solid
+0 0.000000 10.500000 hedge
+solid
+0 0.000000 9.500000 hedge
+solid
+0 0.000000 8.500000 hedge
 solid
 0 0.000000 7.500000 hedge
 solid
@@ -224,4 +248,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 8.000000 0.500000 vedge
+0.000000 14.000000 0.500000 vedge
