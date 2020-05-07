@@ -11,8 +11,8 @@
 
 CommandParser::CommandParser(const Receiver& receiver)
 {
-	this->seedCommands();
 	this->receiver = Receiver(receiver);
+	this->seedCommands();
 }
 
 ICommand* CommandParser::parseCommand(const std::string& fullCommand)

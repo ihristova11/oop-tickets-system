@@ -78,12 +78,16 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_report_command.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_report_command.html">ReportCommand</a> : <span class="keyword">public</span> <a class="code" href="class_i_command.html">ICommand</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">virtual</span> std::string execute(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">virtual</span> std::string toString() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif // !REPORT_COMMAND_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>: </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_report_command.html">ReportCommand</a>(<a class="code" href="class_receiver.html">Receiver</a>*);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_receiver.html">Receiver</a>* receiver;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> std::string execute(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> std::string toString() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif // !REPORT_COMMAND_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_receiver_html"><div class="ttname"><a href="class_receiver.html">Receiver</a></div><div class="ttdef"><b>Definition:</b> Receiver.h:10</div></div>
 <div class="ttc" id="aclass_i_command_html"><div class="ttname"><a href="class_i_command.html">ICommand</a></div><div class="ttdef"><b>Definition:</b> ICommand.h:11</div></div>
 <div class="ttc" id="aclass_report_command_html"><div class="ttname"><a href="class_report_command.html">ReportCommand</a></div><div class="ttdef"><b>Definition:</b> ReportCommand.h:7</div></div>
 <!-- start footer part -->

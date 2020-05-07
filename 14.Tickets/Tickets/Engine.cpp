@@ -6,6 +6,7 @@
 
 Engine::Engine()
 {
+	seed(); // todo: seed file with halls and events
 	this->parser = new CommandParser(this->receiver);
 }
 
@@ -17,7 +18,6 @@ Engine::~Engine()
 void Engine::start()
 {
 	// try catch ?
-	seed(); // todo: seed file with halls and events
 
 	while (true)
 	{
@@ -46,8 +46,15 @@ void Engine::processCommand(std::string commandAsString)
 	// parse parameters
 	std::vector<std::string> parameters = (this->parser)->parseParameters(commandAsString);
 
-	std::string executionResult = command->execute(parameters);
-	std::cout << executionResult << std::endl;
+	if (command != nullptr)
+	{
+		std::string executionResult = command->execute(parameters);
+		std::cout << executionResult << std::endl;
+	}
+	else
+	{
+		std::cout << Constants::Error << std::endl;
+	}
 }
 
 void Engine::seed()
