@@ -14,6 +14,8 @@ std::string BookCommand::execute(const std::vector<std::string>& parameters)
 			&& this->receiver->events[i].date == date)
 		{
 			// todo: implement booking
+			//check if ticket is reserved
+			// buy the ticket
 		}
 	}
 	return Constants::Success;

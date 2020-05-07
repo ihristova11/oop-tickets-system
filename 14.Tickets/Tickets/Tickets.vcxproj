@@ -197,6 +197,7 @@
     <ClInclude Include="SaveAsCommand.h" />
     <ClInclude Include="SaveCommand.h" />
     <ClInclude Include="Ticket.h" />
+    <ClInclude Include="TicketType.h" />
     <ClInclude Include="UnbookCommand.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
