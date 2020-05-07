@@ -1,11 +1,12 @@
 #include "Engine.h"
+#include "CommandParser.h"
 
 #include <string>
 #include <iostream>
-#include "CommandParser.h"
+
 Engine::Engine()
 {
-	this->parser = new CommandParser();
+	this->parser = new CommandParser(this->receiver);
 }
 
 Engine::~Engine()
@@ -16,7 +17,7 @@ Engine::~Engine()
 void Engine::start()
 {
 	// try catch ?
-	void seed(); // todo: seed file with halls and events
+	seed(); // todo: seed file with halls and events
 
 	while (true)
 	{
@@ -49,8 +50,10 @@ void Engine::processCommand(std::string commandAsString)
 	std::cout << executionResult << std::endl;
 }
 
-std::vector<Hall> Engine::seed()
+void Engine::seed()
 {
-	return std::vector<Hall>();
+	this->receiver.halls.push_back(Hall(1));
+	this->receiver.halls.push_back(Hall(2));
+	this->receiver.halls.push_back(Hall(3));
 }
 

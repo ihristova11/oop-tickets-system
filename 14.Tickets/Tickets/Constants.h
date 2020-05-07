@@ -21,6 +21,9 @@ namespace Constants
 	const std::string HelpCommandName = "help";
 	const std::string ExitCommandName = "exit";
 
+	const std::string NoHall = "No such hall exists!";
+
 	const std::string Success = "Success!";
+	const std::string Error = "Something's wrong with your command, try again!";
 }
 #endif // !CONSTANTS_H

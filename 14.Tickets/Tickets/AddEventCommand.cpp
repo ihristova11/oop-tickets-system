@@ -2,21 +2,36 @@
 #include "Hall.h"
 #include "Event.h"
 
+AddEventCommand::AddEventCommand(const Receiver& receiver) : receiver(receiver) 
+// should be in base class? receiver?
+{ }
+
 std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 {
-	std::string date = parameters[1]; // skips 0 since its the command's name
-
+	std::string date = parameters[1];
 	int hallId = std::stoi(parameters[2]);
+	std::string eventName = parameters[3];
 
-	// should have validator for commands
+	Hall* hall = this->receiver.getHallWithId(hallId);
 
-	std::string name = parameters[3]; // event name
-
-	//find hall with that name
-
-	// check for event at that time and hall
-	this->receiver.events.push_back(new Event(name, date, Hall(hallId))); // todo: refactor
-
+	if (hall == nullptr)
+	{
+		// hall was not found
+		throw Constants::NoHall; // part of command validation
+		return Constants::Error;
+	}
+	else
+	{
+		if (this->receiver.getEvent(date, eventName) == nullptr)
+		{
+			// no such event at that time so we can create a new event
+			this->receiver.addEvent(date, eventName, hallId);
+		}
+		else
+		{
+			return Constants::Error;
+		}
+	}
 
 	return Constants::Success;
 }

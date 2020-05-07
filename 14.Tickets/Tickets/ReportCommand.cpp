@@ -1,5 +1,8 @@
 #include "ReportCommand.h"
 
+ReportCommand::ReportCommand(const Receiver& receiver) : receiver(receiver)
+{ }
+
 std::string ReportCommand::execute(const std::vector<std::string>& parameters)
 {
 	std::string from = parameters[1];

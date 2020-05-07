@@ -20,7 +20,7 @@ private:
 	ICommandParser* parser;
 
 	void processCommand(std::string commandAsString);
-	std::vector<Hall> seed();
+	void seed(); // seeder?
 };
 
 #endif // !ENGINE_H

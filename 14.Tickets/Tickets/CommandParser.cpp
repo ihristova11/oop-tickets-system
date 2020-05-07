@@ -9,9 +9,10 @@
 #include "CheckCommand.h"
 #include "ReportCommand.h"
 
-CommandParser::CommandParser()
+CommandParser::CommandParser(const Receiver& receiver)
 {
 	this->seedCommands();
+	this->receiver = Receiver(receiver);
 }
 
 ICommand* CommandParser::parseCommand(const std::string& fullCommand)
@@ -36,14 +37,14 @@ std::vector<std::string> CommandParser::parseParameters(const std::string& fullC
 
 void CommandParser::seedCommands()
 {
-	this->commands.push_back(new AddEventCommand());
-	this->commands.push_back(new FreeSeatsCommand());
-	this->commands.push_back(new BookCommand());
-	this->commands.push_back(new UnbookCommand());
-	this->commands.push_back(new BuyCommand());
-	this->commands.push_back(new BookingsCommand());
-	this->commands.push_back(new CheckCommand());
-	this->commands.push_back(new ReportCommand());
+	this->commands.push_back(new AddEventCommand(this->receiver));
+	this->commands.push_back(new FreeSeatsCommand(this->receiver));
+	this->commands.push_back(new BookCommand(this->receiver));
+	this->commands.push_back(new UnbookCommand(this->receiver));
+	this->commands.push_back(new BuyCommand(this->receiver));
+	this->commands.push_back(new BookingsCommand(this->receiver));
+	this->commands.push_back(new CheckCommand(this->receiver));
+	this->commands.push_back(new ReportCommand(this->receiver));
 }
 
 template <typename Out>
