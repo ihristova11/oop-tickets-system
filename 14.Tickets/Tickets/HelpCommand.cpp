@@ -1,8 +1,12 @@
 #include "HelpCommand.h"
 
+HelpCommand::HelpCommand(Receiver* receiver) : receiver(receiver)
+{ }
+
 std::string HelpCommand::execute(const std::vector<std::string>&)
 {
-	return Constants::Success;
+	// not interested in checking the parameters
+	return Constants::HelpRenspose;
 }
 
 std::string HelpCommand::toString()

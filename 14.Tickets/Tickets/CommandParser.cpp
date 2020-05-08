@@ -8,6 +8,8 @@
 #include "BookingsCommand.h"
 #include "CheckCommand.h"
 #include "ReportCommand.h"
+#include "HelpCommand.h"
+#include "PopularEventsCommand.h"
 
 CommandParser::CommandParser(Receiver* receiver)
 {
@@ -45,6 +47,10 @@ void CommandParser::seedCommands()
 	this->commands.push_back(new BookingsCommand(this->receiver));
 	this->commands.push_back(new CheckCommand(this->receiver));
 	this->commands.push_back(new ReportCommand(this->receiver));
+	this->commands.push_back(new PopularEventsCommand(this->receiver));
+
+	this->commands.push_back(new HelpCommand(this->receiver));
+
 }
 
 template <typename Out>
