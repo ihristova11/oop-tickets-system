@@ -55,8 +55,8 @@ void CommandParser::seedCommands()
 	this->commands.push_back(new ExitCommand(this->receiver));
 }
 
-template <typename Out>
-void CommandParser::split(const std::string& s, char delim, Out result) {
+template <typename T>
+void CommandParser::split(const std::string& s, char delim, T result) {
 	std::istringstream iss(s);
 	std::string item;
 	while (std::getline(iss, item, delim)) {

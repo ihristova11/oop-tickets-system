@@ -1,5 +1,8 @@
 #include "Ticket.h"
 
+Ticket::Ticket() : code(""), event(nullptr), note(""), row(0), seat(0), type(TicketType::NONPURCHASED)
+{ }
+
 Ticket::Ticket(const int& row, const int& seat,
 	Event* event)
 	: code("ticket" + event->name + "-" + event->date +

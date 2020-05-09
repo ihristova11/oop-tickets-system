@@ -5,6 +5,8 @@
 #include "IEngine.h"
 #include "ICommandParser.h"
 #include "Hall.h"
+#include "FileWriter.h"
+#include "FileReader.h"
 
 class Engine : public IEngine
 {
@@ -18,9 +20,11 @@ private:
 
 	std::vector<ICommand*> commands;
 	ICommandParser* parser;
+	FileWriter* writer;
+	FileReader* reader;
 
 	void processCommand(std::string commandAsString);
-	void seed(); // seeder?
+	void seed();
 };
 
 #endif // !ENGINE_H

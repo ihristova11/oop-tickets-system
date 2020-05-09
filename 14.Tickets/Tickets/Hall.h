@@ -7,6 +7,7 @@
 class Hall
 {
 public:
+	Hall();
 	Hall(const int&);
 	Hall(const Hall&);
 	

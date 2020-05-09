@@ -46,6 +46,12 @@
     <Filter Include="Source Files\Models">
       <UniqueIdentifier>{0c918ceb-d9d6-4736-823d-92dc0c27186a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{c6ba9c0b-33f9-4ce8-884c-3c9b86cb148b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{6286013c-be59-459f-968c-35d97a55d8e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Startup.cpp">
@@ -113,6 +119,12 @@
     </ClCompile>
     <ClCompile Include="PopularEventsCommand.cpp">
       <Filter>Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="FileWriter.cpp">
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +205,12 @@
     </ClInclude>
     <ClInclude Include="PopularEventsCommand.h">
       <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="FileWriter.h">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

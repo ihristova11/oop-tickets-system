@@ -161,6 +161,8 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="ExitCommand.cpp" />
+    <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="FileWriter.cpp" />
     <ClCompile Include="FreeSeatsCommand.cpp" />
     <ClCompile Include="Hall.cpp" />
     <ClCompile Include="HelpCommand.cpp" />
@@ -186,6 +188,8 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="ExitCommand.h" />
+    <ClInclude Include="FileReader.h" />
+    <ClInclude Include="FileWriter.h" />
     <ClInclude Include="Hall.h" />
     <ClInclude Include="HelpCommand.h" />
     <ClInclude Include="ICommand.h" />

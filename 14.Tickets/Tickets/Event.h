@@ -6,6 +6,7 @@
 class Event
 {
 public:
+	Event();
 	Event(const std::string&, const std::string&, const Hall&);
 
 	// not sure if public is ok?

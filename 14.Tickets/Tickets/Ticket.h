@@ -10,6 +10,7 @@
 class Ticket
 {
 public:
+	Ticket();
 	Ticket(const int&, const int&, Event*);
 	Ticket(const Ticket&);
 	Ticket& operator=(const Ticket&);

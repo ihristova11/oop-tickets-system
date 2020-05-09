@@ -6,18 +6,21 @@
 
 Engine::Engine()
 {
-	seed(); // todo: seed file with halls and events
 	this->parser = new CommandParser(&this->receiver);
+	this->writer = new FileWriter();
+	this->reader = new FileReader();
 }
 
 Engine::~Engine()
 {
 	delete this->parser;
+	delete this->writer;
+	delete this->reader;
 }
 
 void Engine::start()
 {
-	// try catch ?
+	this->seed(); // for testing purposes
 
 	while (true)
 	{
@@ -57,8 +60,27 @@ void Engine::processCommand(std::string commandAsString)
 void Engine::seed()
 {
 	// for testing purposes
-	this->receiver.halls.push_back(Hall(1));
-	this->receiver.halls.push_back(Hall(2));
-	this->receiver.halls.push_back(Hall(3));
+	Hall halls[3] = { Hall(1), Hall(2), Hall(3) };
+	Event events[2] =
+	{
+		Event("2020-08-08", "testEvent", Hall(1)),
+		Event("2020-08-08", "testEvent", Hall(2))
+	};
+	Ticket tickets[2] =
+	{
+		Ticket(1, 1, &events[1]),
+		Ticket(1, 1, &events[0]),
+	};
+
+	std::ofstream hallsBin{ "halls.bin", std::ios::binary };
+	this->writer->writeBinary(halls, std::cend(halls), hallsBin);
+
+	std::ofstream eventsBin{ "events.bin", std::ios::binary };
+	this->writer->writeBinary(events, std::cend(events), eventsBin);
+
+	std::ofstream ticketsBin{ "tickets.bin", std::ios::binary };
+	this->writer->writeBinary(tickets, std::cend(tickets), ticketsBin);
+
+	// close streams
 }
 
