@@ -34,5 +34,6 @@ namespace Constants
 
 	const std::string AddEventError = "Sorry, this hall does not exist or is taken. Please choose another one!"; 
 	const std::string SeatNotAvailable = "Sorry, this seat is taken or there is no such event! Choose another one.";
+	const std::string UnbookError = "There is nothing to unbook! Thank you!";
 }
 #endif // !CONSTANTS_H

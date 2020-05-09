@@ -19,7 +19,7 @@ public:
 private:
 	bool eventExists(const std::string&, const std::string&);
 	bool isAvailableSeat(const std::string&, const std::string&, const int&, const int&);
-	Event* getEvent(const std::string&, const std::string&);
+	Event* getEvent(const std::string&, const std::string&); // duplicate
 };
 
 #endif // !BOOK_COMMAND_H
