@@ -8,6 +8,13 @@ Ticket::Ticket(const int& row, const int& seat)
 	note("default note"), row(row), seat(seat), type(TicketType::NONPURCHASED)
 { }
 
+Ticket::Ticket(const int& row, const int& seat, 
+	const TicketType& type, const std::string& note)
+	:code("default ticket"), // + std::to_string(seat) + "-" + std::to_string(row)
+	note(note), row(row), seat(seat), type(type)
+{
+}
+
 Ticket::Ticket(const Ticket& other)
 {
 	this->copyInternals(other);

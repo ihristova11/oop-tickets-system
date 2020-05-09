@@ -45,7 +45,7 @@ void CommandParser::seedCommands()
 	this->commands.push_back(new AddEventCommand(this->receiver,
 		this->reader, &this->validator));
 	this->commands.push_back(new FreeSeatsCommand(this->receiver));
-	this->commands.push_back(new BookCommand(this->receiver));
+	this->commands.push_back(new BookCommand(this->receiver, &this->validator));
 	this->commands.push_back(new UnbookCommand(this->receiver));
 	this->commands.push_back(new BuyCommand(this->receiver));
 	this->commands.push_back(new BookingsCommand(this->receiver));

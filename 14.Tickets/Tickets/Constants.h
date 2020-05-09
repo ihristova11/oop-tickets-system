@@ -33,5 +33,6 @@ namespace Constants
 	const std::string ExitResponse = "Exiting the program...";
 
 	const std::string AddEventError = "Sorry, this hall does not exist or is taken. Please choose another one!"; 
+	const std::string SeatNotAvailable = "Sorry, this seat is taken or there is no such event! Choose another one.";
 }
 #endif // !CONSTANTS_H
