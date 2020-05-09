@@ -69,16 +69,13 @@ void Engine::seed()
 	std::vector<Ticket> tickets1 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
 	std::vector<Ticket> tickets2 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
 
-	Event events[2] =
+	std::vector<Event> events =
 	{
 		Event("2020-08-08", "testEvent",  Hall(1, 5, 5), tickets1),
 		Event("2020-08-08", "testEvent", Hall(2, 4, 4), tickets2)
 	};
 
 	// in writer or not?
-	std::ofstream eventsBin{ "events.bin", std::ios::binary };
-	this->writer->write(events, std::cend(events), eventsBin);
-
-	eventsBin.close();
+	this->writer->write("events.bin", events);
 }
 

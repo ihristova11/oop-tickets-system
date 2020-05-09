@@ -9,13 +9,13 @@
 class FileReader
 {
 public:
-	template <typename T>
-	void loadFile(std::string file, std::vector<T>& arr)
+	//template <typename T>
+	void loadFile(std::string file, std::vector<Event>& arr)
 	{
 		int n = countRecords(file, arr);
 		if (n != 0)
 		{
-			T* temp = new T[n];
+			Event* temp = new Event[n];
 			std::ifstream ifs;
 			ifs.open(file, std::ios::in | std::ios::binary);
 			if (!ifs)
@@ -24,7 +24,7 @@ public:
 				std::cerr << "No players to choose from! Create a new player." << std::endl;
 			}
 			ifs.seekg(0);
-			ifs.read((char*)&*temp, sizeof(T) * n);
+			ifs.read((char*)&*temp, sizeof(Event) * n);
 
 			for (size_t i = 0; i < n; i++)
 			{
