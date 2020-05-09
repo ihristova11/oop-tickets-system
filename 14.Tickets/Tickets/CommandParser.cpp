@@ -10,6 +10,7 @@
 #include "ReportCommand.h"
 #include "HelpCommand.h"
 #include "PopularEventsCommand.h"
+#include "ExitCommand.h"
 
 CommandParser::CommandParser(Receiver* receiver)
 {
@@ -39,6 +40,7 @@ std::vector<std::string> CommandParser::parseParameters(const std::string& fullC
 
 void CommandParser::seedCommands()
 {
+	// register commands
 	this->commands.push_back(new AddEventCommand(this->receiver));
 	this->commands.push_back(new FreeSeatsCommand(this->receiver));
 	this->commands.push_back(new BookCommand(this->receiver));
@@ -50,7 +52,7 @@ void CommandParser::seedCommands()
 	this->commands.push_back(new PopularEventsCommand(this->receiver));
 
 	this->commands.push_back(new HelpCommand(this->receiver));
-
+	this->commands.push_back(new ExitCommand(this->receiver));
 }
 
 template <typename Out>

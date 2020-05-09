@@ -1,4 +1,5 @@
 #include "OpenCommand.h"
+#include <fstream> // may update this later
 
 std::string OpenCommand::execute(const std::vector<std::string>& parameters)
 {

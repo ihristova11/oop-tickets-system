@@ -27,11 +27,8 @@ void Engine::start()
 
 		this->processCommand(commandString);
 
-		if (commandString == "exit") // tolower()
-		{
-			// todo: only write message to the console since the command has executed successfully
+		if (commandString == "exit")
 			break;
-		}
 	}
 }
 
@@ -53,7 +50,7 @@ void Engine::processCommand(std::string commandAsString)
 	}
 	else
 	{
-		std::cout<<Constants::Error<<std::endl;
+		std::cout << Constants::Error << std::endl;
 	}
 }
 
