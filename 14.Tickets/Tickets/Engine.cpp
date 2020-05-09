@@ -21,7 +21,7 @@ Engine::~Engine()
 
 void Engine::start()
 {
-	//this->seed(); // for testing purposes
+	this->seed(); // for testing purposes
 
 	while (true)
 	{
@@ -64,18 +64,18 @@ void Engine::seed()
 	// already defined (do not load from file)
 	this->receiver.halls = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
 
-	// for testing purposes | DELETE LATER
-	// update names
-	std::vector<Ticket> tickets1 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
-	std::vector<Ticket> tickets2 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
+	//// for testing purposes | DELETE LATER
+	//// update names
+	//std::vector<Ticket> tickets1 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
+	//std::vector<Ticket> tickets2 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
 
-	std::vector<Event> events =
-	{
-		Event("2020-08-08", "testEvent",  Hall(1, 5, 5), tickets1),
-		Event("2020-08-08", "testEvent", Hall(2, 4, 4), tickets2)
-	};
+	//std::vector<Event> events =
+	//{
+	//	Event("2020-08-08", "testEvent",  Hall(1, 5, 5), tickets1),
+	//	Event("2020-08-08", "testEvent", Hall(2, 4, 4), tickets2)
+	//};
 
-	// in writer or not?
-	this->writer->write("events.txt", events);
+	//// in writer or not?
+	//this->writer->write("events.txt", events);
 }
 

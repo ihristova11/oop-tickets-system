@@ -54,7 +54,8 @@ void CommandParser::seedCommands()
 
 	this->commands.push_back(new HelpCommand(this->receiver));
 	this->commands.push_back(new ExitCommand(this->receiver));
-	this->commands.push_back(new OpenCommand(this->receiver, this->reader));
+	this->commands.push_back(new OpenCommand(this->receiver, 
+		this->reader, &this->validator));
 }
 
 template <typename T>

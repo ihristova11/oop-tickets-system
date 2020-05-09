@@ -5,6 +5,8 @@ class CommandValidator
 {
 public:
 	bool isValidDate(std::string);
+	bool isValidInputFile(std::string);
+	bool isTxt();
 };
 
 #endif // !COMMAND_VALIDATOR_H

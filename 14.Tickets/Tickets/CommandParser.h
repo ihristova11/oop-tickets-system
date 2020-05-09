@@ -8,12 +8,13 @@
 #include "ICommand.h"
 #include "ICommandParser.h"
 #include "FileReader.h"
+#include "CommandValidator.h"
 
 class CommandParser : public ICommandParser
 {
 public:
 	CommandParser(Receiver*, FileReader*);
-
+	CommandValidator validator;
 	Receiver* receiver;
 	FileReader* reader;
 
