@@ -27,6 +27,7 @@ public:
 	Event* getEvent(const std::string&, const std::string&); // duplicate
 	int getTicketInd(std::vector<Ticket>&, const std::string&,
 		const std::string&, const int&, const int&); // too many params
+	Ticket* getTicketByCode(const std::string&);
 private:
 	void copyInternals(const Store&);
 };

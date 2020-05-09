@@ -48,8 +48,8 @@ void CommandParser::seedCommands()
 	this->commands.push_back(new BookCommand(this->store, &this->validator));
 	this->commands.push_back(new UnbookCommand(this->store, &this->validator));
 	this->commands.push_back(new BuyCommand(this->store, &this->validator));
-	this->commands.push_back(new BookingsCommand(this->store));
-	this->commands.push_back(new CheckCommand(this->store));
+	this->commands.push_back(new BookingsCommand(this->store, &this->validator));
+	this->commands.push_back(new CheckCommand(this->store, &this->validator));
 	this->commands.push_back(new ReportCommand(this->store));
 	this->commands.push_back(new PopularEventsCommand(this->store));
 

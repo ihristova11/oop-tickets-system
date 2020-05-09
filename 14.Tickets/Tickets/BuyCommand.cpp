@@ -24,10 +24,13 @@ std::string BuyCommand::execute(const std::vector<std::string>& parameters)
 		}
 		else
 		{
+			Event* found = this->store->getEvent(date, name);
 			// add new
-			this->store->getEvent(date, name)->tickets
-				.push_back(Ticket(row, seat, TicketType::PURCHASED));
-			this->store->tickets.push_back(Ticket(row, seat, TicketType::PURCHASED));
+			found->tickets
+				.push_back(Ticket(row, seat, found->hall.id, found->date,
+					TicketType::PURCHASED));
+			this->store->tickets.push_back(Ticket(row, seat, found->hall.id, found->date,
+				TicketType::PURCHASED));
 		}
 	}
 

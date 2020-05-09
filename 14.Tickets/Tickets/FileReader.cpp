@@ -25,9 +25,12 @@ void FileReader::read(std::string file, std::vector<Event>& arr)
 			ifs.ignore();
 			std::getline(ifs, arr[i].tickets[j].code);
 			std::getline(ifs, arr[i].tickets[j].note);
+			std::getline(ifs, arr[i].tickets[j].date);
 			ifs >> arr[i].tickets[j].row;
 			ifs.get();
 			ifs >> arr[i].tickets[j].seat;
+			ifs.get();
+			ifs >> arr[i].tickets[j].hallId;
 			ifs.get();
 			int type = 0;
 			ifs >> type;

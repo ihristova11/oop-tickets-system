@@ -111,6 +111,18 @@ int Store::getTicketInd(std::vector<Ticket>& store, const std::string& date,
 	return -1;
 }
 
+Ticket* Store::getTicketByCode(const std::string& code)
+{
+	for (size_t i = 0; i < this->tickets.size(); i++)
+	{
+		if (this->tickets[i].code == code)
+		{
+			return &this->tickets[i];
+		}
+	}
+	return nullptr;
+}
+
 
 
 void Store::copyInternals(const Store& other)

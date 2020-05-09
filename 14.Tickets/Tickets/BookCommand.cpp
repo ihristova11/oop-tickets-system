@@ -13,12 +13,14 @@ std::string BookCommand::execute(const std::vector<std::string>& parameters)
 	std::string name = parameters[4];
 	std::string note = parameters[5];
 
-	if (validator->isValidDate(date) && this->store->eventExists(date, name) 
+	if (validator->isValidDate(date) && this->store->eventExists(date, name)
 		&& this->store->isAvailableSeat(date, name, row, seat))
 	{
-		this->store->getEvent(date, name)->tickets
-			.push_back(Ticket(row, seat, TicketType::RESERVED, note));
-		this->store->tickets.push_back(Ticket(row, seat, TicketType::RESERVED, note));
+		Event* found = this->store->getEvent(date, name);
+		found->tickets
+			.push_back(Ticket(row, seat, found->hall.id, found->date, TicketType::RESERVED, note));
+		this->store->tickets.push_back(Ticket(row, seat, 
+			found->hall.id, found->date, TicketType::RESERVED, note));
 		return Constants::Success;
 	}
 

@@ -10,9 +10,9 @@ class Ticket
 {
 public:
 	Ticket();
-	Ticket(const int&, const int&);
-	Ticket(const int&, const int&, const TicketType&);
-	Ticket(const int&, const int&, const TicketType&, const std::string&);
+	Ticket(const int&, const int&, const int&, const std::string&);
+	Ticket(const int&, const int&, const int&, const std::string&, const TicketType&);
+	Ticket(const int&, const int&, const int&, const std::string&, const TicketType&, const std::string&);
 	Ticket(const Ticket&);
 	Ticket& operator=(const Ticket&);
 	// not gonna need a destructor
@@ -22,6 +22,8 @@ public:
 	std::string note;
 	int row;
 	int seat;
+	int hallId;
+	std::string date;
 	TicketType type;
 
 	void print(std::ostream&);

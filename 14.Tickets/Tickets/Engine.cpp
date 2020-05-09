@@ -69,8 +69,8 @@ void Engine::seed()
 
 	//// for testing purposes | DELETE LATER
 	//// update names
-	//std::vector<Ticket> tickets1 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
-	//std::vector<Ticket> tickets2 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
+	//std::vector<Ticket> tickets1 = { Ticket(1,1, 1, "2020-08-08"), Ticket(2,2, 2, "2020-08-08"), Ticket(3,3, 2, "2020-08-08") };
+	//std::vector<Ticket> tickets2 = { Ticket(1,1, 1, "2020-08-09"), Ticket(2,2, 2, "2020-08-09"), Ticket(3,3, 3, "2020-08-09") };
 
 	//std::vector<Event> events =
 	//{
