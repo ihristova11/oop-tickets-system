@@ -1,45 +1,38 @@
 #include "FileReader.h"
-template<typename T>
-int FileReader::countRecords(std::string file, const std::vector<T>&)
+
+void FileReader::read(std::string file, std::vector<Event>& arr)
 {
-	int n;
+	int events = 0;
 	std::ifstream ifs;
-	ifs.open(file, std::ios::in | std::ios::binary);
-	if (!ifs)
+	ifs.open(file, std::ios::in);
+	ifs >> events; // read events number
+	for (size_t i = 0; i < events; i++)
 	{
-		// update the message
-		std::cerr << "No players to choose from! Create a new player." << std::endl;
-		return 0;
+		arr.push_back(Event());
+		ifs.ignore();
+		std::getline(ifs, arr[i].date);
+		std::getline(ifs, arr[i].name);
+		ifs >> arr[i].hall.id;
+		ifs.get();
+		ifs >> arr[i].hall.rows;
+		ifs.get();
+		ifs >> arr[i].hall.seatsPerRow;
+		int tickets = 0;
+		ifs >> tickets;
+		for (size_t j = 0; j < tickets; j++)
+		{
+			arr[i].tickets.push_back(Ticket());
+			ifs.ignore();
+			std::getline(ifs, arr[i].tickets[j].code);
+			std::getline(ifs, arr[i].tickets[j].note);
+			ifs >> arr[i].tickets[j].row;
+			ifs.get();
+			ifs >> arr[i].tickets[j].seat;
+			ifs.get();
+			int type = 0;
+			ifs >> type;
+			arr[i].tickets[j].type = static_cast<TicketType>(type);
+		}
 	}
-	ifs.seekg(0, std::ios::end);
-
-	n = ifs.tellg() / sizeof(T);
 	ifs.close();
-	return n;
-}
-
-template<typename T>
-void FileReader::loadFile(std::string file, std::vector<T>& arr)
-{
-	int n = countRecords(file, arr);
-	if (n != 0)
-	{
-		T* temp = new T[n];
-		std::ifstream ifs;
-		ifs.open(file, std::ios::in | std::ios::binary);
-		if (!ifs)
-		{
-			// update the error message
-			std::cerr << "No players to choose from! Create a new player." << std::endl;
-		}
-		ifs.seekg(0);
-		ifs.read((char*)&*temp, sizeof(T) * n);
-
-		for (size_t i = 0; i < n; i++)
-		{
-			arr.push_back(temp[i]);
-		}
-		ifs.close();
-		delete[] temp;
-	}
 }

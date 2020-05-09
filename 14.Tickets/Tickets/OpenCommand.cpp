@@ -9,7 +9,7 @@ std::string OpenCommand::execute(const std::vector<std::string>& parameters)
 	std::string fileName = parameters[1]; //.txt files only
 
 	// check if everything is ok
-	this->reader->loadFile(fileName, this->receiver->events);
+	this->reader->read(fileName, this->receiver->events);
 
 	return Constants::Success;
 }

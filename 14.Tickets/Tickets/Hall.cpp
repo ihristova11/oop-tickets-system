@@ -17,7 +17,3 @@ Hall::Hall(const Hall& other)
 	this->seatsPerRow = other.seatsPerRow;
 }
 
-int Hall::getId() const
-{
-	return this->id;
-}

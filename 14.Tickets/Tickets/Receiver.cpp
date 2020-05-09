@@ -24,7 +24,7 @@ Hall* Receiver::getHallWithId(const int& hallId)
 	//find hall with that name
 	for (size_t i = 0; i < this->halls.size(); i++)
 	{
-		if (this->halls[i].getId() == hallId) // what if there is no such hall?
+		if (this->halls[i].id == hallId) // what if there is no such hall?
 		{
 			hall = &(this->halls[i]);
 			break;

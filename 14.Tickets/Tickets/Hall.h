@@ -13,9 +13,6 @@ public:
 	Hall(const Hall&);
 	// destructor is not needed here
 
-	int getId() const;
-
-private:
 	int id;
 	int rows;
 	int seatsPerRow;

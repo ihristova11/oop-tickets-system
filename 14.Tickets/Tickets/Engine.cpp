@@ -76,6 +76,6 @@ void Engine::seed()
 	};
 
 	// in writer or not?
-	this->writer->write("events.bin", events);
+	this->writer->write("events.txt", events);
 }
 

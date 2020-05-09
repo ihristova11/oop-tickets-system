@@ -1,6 +1,6 @@
 #include "Event.h"
 
-Event::Event() : name("default"), date("2020-08-08"), hall(Hall(1)), tickets()
+Event::Event() : name("default"), date("2020-11-11"), hall(Hall(1)), tickets()
 { }
 
 Event::Event(const std::string& name, const std::string& date, const Hall& hall)
