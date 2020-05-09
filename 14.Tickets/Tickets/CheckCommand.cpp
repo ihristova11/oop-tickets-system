@@ -1,17 +1,12 @@
 #include "CheckCommand.h"
 
-CheckCommand::CheckCommand(Receiver* receiver) : receiver(receiver)
+CheckCommand::CheckCommand(Store* store) : store(store)
 { }
 
 std::string CheckCommand::execute(const std::vector<std::string>& parameters)
 {
 	std::string ticketCode = parameters[1]; // code
 
-	if (this->receiver->checkCode(ticketCode))
-	{
-		return Constants::Success;
-
-	}
 
 	return Constants::Error;
 }

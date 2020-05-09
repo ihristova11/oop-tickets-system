@@ -4,7 +4,7 @@ std::string CloseCommand::execute(const std::vector<std::string>& parameters)
 {
 	std::string file = parameters[1]; // check if valid file
 
-	// delete receiver->halls
+	// delete store->halls
 
 	return Constants::CloseSuccess;
 }

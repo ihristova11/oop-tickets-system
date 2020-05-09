@@ -1,6 +1,6 @@
 #include "FreeSeatsCommand.h"
 
-FreeSeatsCommand::FreeSeatsCommand(Receiver* receiver) : receiver(receiver)
+FreeSeatsCommand::FreeSeatsCommand(Store* store) : store(store)
 { }
 
 std::string FreeSeatsCommand::execute(const std::vector<std::string>& parameters)

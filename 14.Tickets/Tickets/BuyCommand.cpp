@@ -1,16 +1,35 @@
 #include "BuyCommand.h"
 
-BuyCommand::BuyCommand(Receiver* receiver) : receiver(receiver)
+BuyCommand::BuyCommand(Store* store, CommandValidator* validator)
+	: store(store), validator(validator)
 { }
 
 std::string BuyCommand::execute(const std::vector<std::string>& parameters)
 {
+	// validate row, seat!
 	int row = std::stoi(parameters[1]);
 	int seat = std::stoi(parameters[2]);
 	std::string date = parameters[3];
 	std::string name = parameters[4];
 
-	this->receiver->buyTicket(row, seat, date, name);
+	if (validator->isValidDate(date) && this->store->eventExists(date, name))
+	{
+		int ind = this->store->getTicketInd(this->store->tickets, date, name, row, seat);
+		if (ind != -1)
+		{
+			// change state only
+			this->store->tickets[ind].type = TicketType::PURCHASED;
+			int eInd = this->store->getTicketInd(this->store->getEvent(date, name)->tickets, date, name, row, seat);
+			this->store->getEvent(date, name)->tickets[eInd].type = TicketType::PURCHASED;
+		}
+		else
+		{
+			// add new
+			this->store->getEvent(date, name)->tickets
+				.push_back(Ticket(row, seat, TicketType::PURCHASED));
+			this->store->tickets.push_back(Ticket(row, seat, TicketType::PURCHASED));
+		}
+	}
 
 	return Constants::Success;
 }

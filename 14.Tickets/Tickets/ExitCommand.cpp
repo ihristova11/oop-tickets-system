@@ -1,6 +1,6 @@
 #include "ExitCommand.h"
 
-ExitCommand::ExitCommand(Receiver* receiver) : receiver(receiver)
+ExitCommand::ExitCommand(Store* store) : store(store)
 { }
 
 std::string ExitCommand::execute(const std::vector<std::string>&)

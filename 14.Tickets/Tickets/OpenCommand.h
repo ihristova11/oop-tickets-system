@@ -8,10 +8,10 @@
 class OpenCommand : public ICommand
 {
 public:
-	OpenCommand(Receiver*, FileReader*, CommandValidator*);
+	OpenCommand(Store*, FileReader*, CommandValidator*);
 
 	CommandValidator* validator; // base class
-	Receiver* receiver; // base class
+	Store* store; // base class
 	FileReader* reader;
 	
 	virtual std::string execute(const std::vector<std::string>&) override;

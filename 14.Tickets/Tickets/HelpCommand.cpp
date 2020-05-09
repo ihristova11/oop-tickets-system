@@ -1,6 +1,6 @@
 #include "HelpCommand.h"
 
-HelpCommand::HelpCommand(Receiver* receiver) : receiver(receiver)
+HelpCommand::HelpCommand(Store* store) : store(store)
 { }
 
 std::string HelpCommand::execute(const std::vector<std::string>&)

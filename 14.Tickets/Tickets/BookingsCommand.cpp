@@ -1,6 +1,6 @@
 #include "BookingsCommand.h"
 
-BookingsCommand::BookingsCommand(Receiver* receiver) : receiver(receiver)
+BookingsCommand::BookingsCommand(Store* store) : store(store)
 { }
 
 std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
@@ -11,14 +11,14 @@ std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 	//	std::string date = parameters[1];
 	//	std::string name = parameters[2];
 
-	//	for (size_t i = 0; i < this->receiver->tickets.size(); i++)
+	//	for (size_t i = 0; i < this->store->tickets.size(); i++)
 	//	{
-	//		if (this->receiver->tickets[i].type == TicketType::RESERVED
-	//			&& this->receiver->tickets[i].event->date == date 
-	//			&& this->receiver->tickets[i].event->name == name)
+	//		if (this->store->tickets[i].type == TicketType::RESERVED
+	//			&& this->store->tickets[i].event->date == date 
+	//			&& this->store->tickets[i].event->name == name)
 	//		{
 	//			// print the ticket
-	//			this->receiver->tickets[i].print(std::cout);
+	//			this->store->tickets[i].print(std::cout);
 	//		}
 	//	}
 	//}

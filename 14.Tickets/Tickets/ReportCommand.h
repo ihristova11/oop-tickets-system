@@ -6,8 +6,8 @@
 class ReportCommand : public ICommand
 {
 public: 
-	ReportCommand(Receiver*);
-	Receiver* receiver;
+	ReportCommand(Store*);
+	Store* store;
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

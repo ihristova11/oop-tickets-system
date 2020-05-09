@@ -11,6 +11,7 @@ class Ticket
 public:
 	Ticket();
 	Ticket(const int&, const int&);
+	Ticket(const int&, const int&, const TicketType&);
 	Ticket(const int&, const int&, const TicketType&, const std::string&);
 	Ticket(const Ticket&);
 	Ticket& operator=(const Ticket&);

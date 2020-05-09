@@ -13,7 +13,7 @@ class Engine : public IEngine
 public:
 	Engine();
 	virtual ~Engine();
-	Receiver receiver;
+	Store store;
 	
 	virtual void start() override;
 private:

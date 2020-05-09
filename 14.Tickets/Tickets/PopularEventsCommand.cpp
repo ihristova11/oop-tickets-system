@@ -1,7 +1,7 @@
 #include "PopularEventsCommand.h"
 
-PopularEventsCommand::PopularEventsCommand(Receiver* receiver) 
-	: receiver(receiver)
+PopularEventsCommand::PopularEventsCommand(Store* store) 
+	: store(store)
 { }
 
 std::string PopularEventsCommand::execute(const std::vector<std::string>&)

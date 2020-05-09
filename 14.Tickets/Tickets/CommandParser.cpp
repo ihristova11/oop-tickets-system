@@ -13,8 +13,8 @@
 #include "ExitCommand.h"
 #include "OpenCommand.h"
 
-CommandParser::CommandParser(Receiver* receiver, FileReader* reader)
-	: receiver(receiver), reader(reader)
+CommandParser::CommandParser(Store* store, FileReader* reader)
+	: store(store), reader(reader)
 {
 	seedCommands();
 }
@@ -42,20 +42,20 @@ std::vector<std::string> CommandParser::parseParameters(const std::string& fullC
 void CommandParser::seedCommands()
 {
 	// register commands
-	this->commands.push_back(new AddEventCommand(this->receiver,
+	this->commands.push_back(new AddEventCommand(this->store,
 		this->reader, &this->validator));
-	this->commands.push_back(new FreeSeatsCommand(this->receiver));
-	this->commands.push_back(new BookCommand(this->receiver, &this->validator));
-	this->commands.push_back(new UnbookCommand(this->receiver, &this->validator));
-	this->commands.push_back(new BuyCommand(this->receiver));
-	this->commands.push_back(new BookingsCommand(this->receiver));
-	this->commands.push_back(new CheckCommand(this->receiver));
-	this->commands.push_back(new ReportCommand(this->receiver));
-	this->commands.push_back(new PopularEventsCommand(this->receiver));
+	this->commands.push_back(new FreeSeatsCommand(this->store));
+	this->commands.push_back(new BookCommand(this->store, &this->validator));
+	this->commands.push_back(new UnbookCommand(this->store, &this->validator));
+	this->commands.push_back(new BuyCommand(this->store, &this->validator));
+	this->commands.push_back(new BookingsCommand(this->store));
+	this->commands.push_back(new CheckCommand(this->store));
+	this->commands.push_back(new ReportCommand(this->store));
+	this->commands.push_back(new PopularEventsCommand(this->store));
 
-	this->commands.push_back(new HelpCommand(this->receiver));
-	this->commands.push_back(new ExitCommand(this->receiver));
-	this->commands.push_back(new OpenCommand(this->receiver,
+	this->commands.push_back(new HelpCommand(this->store));
+	this->commands.push_back(new ExitCommand(this->store));
+	this->commands.push_back(new OpenCommand(this->store,
 		this->reader, &this->validator));
 }
 

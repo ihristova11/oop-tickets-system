@@ -8,7 +8,7 @@ Engine::Engine()
 {
 	this->writer = new FileWriter();
 	this->reader = new FileReader();
-	this->parser = new CommandParser(&this->receiver, this->reader);
+	this->parser = new CommandParser(&this->store, this->reader);
 
 }
 
@@ -65,7 +65,7 @@ void Engine::seed()
 {
 	// for testing purposes
 	// already defined (do not load from file)
-	this->receiver.halls = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
+	this->store.halls = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
 
 	//// for testing purposes | DELETE LATER
 	//// update names

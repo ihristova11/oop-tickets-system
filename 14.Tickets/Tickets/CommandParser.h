@@ -13,9 +13,9 @@
 class CommandParser : public ICommandParser
 {
 public:
-	CommandParser(Receiver*, FileReader*);
+	CommandParser(Store*, FileReader*);
 	CommandValidator validator;
-	Receiver* receiver;
+	Store* store;
 	FileReader* reader;
 
 	virtual ICommand* parseCommand(const std::string&) override;

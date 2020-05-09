@@ -1,6 +1,6 @@
 #include "ReportCommand.h"
 
-ReportCommand::ReportCommand(Receiver* receiver) : receiver(receiver)
+ReportCommand::ReportCommand(Store* store) : store(store)
 { }
 
 std::string ReportCommand::execute(const std::vector<std::string>& parameters)
@@ -11,24 +11,24 @@ std::string ReportCommand::execute(const std::vector<std::string>& parameters)
 	//if (parameters.size() == 4) // validation
 	//{
 	//	int hallId = std::stoi(parameters[3]); // custom parameter
-	//	for (size_t i = 0; i < this->receiver->tickets.size(); i++)
+	//	for (size_t i = 0; i < this->store->tickets.size(); i++)
 	//	{
-	//		if (this->receiver->tickets[i].event->hall.getId() == hallId
-	//			&& this->receiver->tickets[i].event->date >= from
-	//			&& this->receiver->tickets[i].event->date < to)
+	//		if (this->store->tickets[i].event->hall.getId() == hallId
+	//			&& this->store->tickets[i].event->date >= from
+	//			&& this->store->tickets[i].event->date < to)
 	//		{
-	//			this->receiver->tickets[i].print(std::cout);
+	//			this->store->tickets[i].print(std::cout);
 	//		}
 	//	}
 	//}
 	//else if (parameters.size() == 3) // constant
 	//{
-	//	for (size_t i = 0; i < this->receiver->tickets.size(); i++)
+	//	for (size_t i = 0; i < this->store->tickets.size(); i++)
 	//	{
-	//		if (this->receiver->tickets[i].event->date >= from
-	//			&& this->receiver->tickets[i].event->date < to)
+	//		if (this->store->tickets[i].event->date >= from
+	//			&& this->store->tickets[i].event->date < to)
 	//		{
-	//			this->receiver->tickets[i].print(std::cout);
+	//			this->store->tickets[i].print(std::cout);
 	//		}
 	//	}
 	//}

@@ -169,7 +169,7 @@
     <ClCompile Include="HelpCommand.cpp" />
     <ClCompile Include="OpenCommand.cpp" />
     <ClCompile Include="PopularEventsCommand.cpp" />
-    <ClCompile Include="Receiver.cpp" />
+    <ClCompile Include="Store.cpp" />
     <ClCompile Include="ReportCommand.cpp" />
     <ClCompile Include="SaveAsCommand.cpp" />
     <ClCompile Include="SaveCommand.cpp" />
@@ -200,7 +200,7 @@
     <ClInclude Include="IEngine.h" />
     <ClInclude Include="OpenCommand.h" />
     <ClInclude Include="PopularEventsCommand.h" />
-    <ClInclude Include="Receiver.h" />
+    <ClInclude Include="Store.h" />
     <ClInclude Include="ReportCommand.h" />
     <ClInclude Include="SaveAsCommand.h" />
     <ClInclude Include="SaveCommand.h" />

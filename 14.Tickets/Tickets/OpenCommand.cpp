@@ -1,7 +1,7 @@
 #include "OpenCommand.h"
 
-OpenCommand::OpenCommand(Receiver* receiver, FileReader* reader, CommandValidator* validator)
-	: receiver(receiver), reader(reader), validator(validator)
+OpenCommand::OpenCommand(Store* store, FileReader* reader, CommandValidator* validator)
+	: store(store), reader(reader), validator(validator)
 { }
 
 std::string OpenCommand::execute(const std::vector<std::string>& parameters)
@@ -9,7 +9,7 @@ std::string OpenCommand::execute(const std::vector<std::string>& parameters)
 	std::string fileName = parameters[1]; 
 	if (validator->isValidInputFile(fileName)) //.txt files only
 	{
-		this->reader->read(fileName, this->receiver->events);
+		this->reader->read(fileName, this->store->events);
 		this->addTickets();
 		return Constants::Success;
 	}
@@ -26,15 +26,15 @@ std::string OpenCommand::toString()
 
 void OpenCommand::addTickets()
 {
-	int n = this->receiver->events.size();
+	int n = this->store->events.size();
 	for (size_t i = 0; i < n; i++)
 	{
-		int t = this->receiver->events[i].tickets.size();
+		int t = this->store->events[i].tickets.size();
 		if (t > 0)
 		{
 			for (size_t j = 0; j < t; j++)
 			{
-				this->receiver->tickets.push_back(this->receiver->events[i].tickets[j]);
+				this->store->tickets.push_back(this->store->events[i].tickets[j]);
 			}
 		}
 	}
