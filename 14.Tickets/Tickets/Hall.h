@@ -9,14 +9,16 @@ class Hall
 public:
 	Hall();
 	Hall(const int&);
+	Hall(const int&, const int&, const int&);
 	Hall(const Hall&);
-	
+	// destructor is not needed here
+
 	int getId() const;
 
 private:
-	unsigned int id;
-	unsigned int rows;
-	unsigned int seatsPerRow;
+	int id;
+	int rows;
+	int seatsPerRow;
 };
 
 #endif // !HALL_H

@@ -12,10 +12,10 @@
 #include "PopularEventsCommand.h"
 #include "ExitCommand.h"
 
-CommandParser::CommandParser(Receiver* receiver)
+CommandParser::CommandParser(Receiver* receiver, FileReader* reader)
+	: receiver(receiver), reader(reader)
 {
-	this->receiver = receiver;
-	this->seedCommands();
+	seedCommands();
 }
 
 ICommand* CommandParser::parseCommand(const std::string& fullCommand)
@@ -41,7 +41,7 @@ std::vector<std::string> CommandParser::parseParameters(const std::string& fullC
 void CommandParser::seedCommands()
 {
 	// register commands
-	this->commands.push_back(new AddEventCommand(this->receiver));
+	this->commands.push_back(new AddEventCommand(this->receiver, this->reader));
 	this->commands.push_back(new FreeSeatsCommand(this->receiver));
 	this->commands.push_back(new BookCommand(this->receiver));
 	this->commands.push_back(new UnbookCommand(this->receiver));

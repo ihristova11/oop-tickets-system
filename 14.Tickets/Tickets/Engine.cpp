@@ -6,16 +6,17 @@
 
 Engine::Engine()
 {
-	this->parser = new CommandParser(&this->receiver);
 	this->writer = new FileWriter();
 	this->reader = new FileReader();
+	this->parser = new CommandParser(&this->receiver, this->reader);
+
 }
 
 Engine::~Engine()
 {
-	delete this->parser;
 	delete this->writer;
 	delete this->reader;
+	delete this->parser;
 }
 
 void Engine::start()
@@ -60,27 +61,19 @@ void Engine::processCommand(std::string commandAsString)
 void Engine::seed()
 {
 	// for testing purposes
-	Hall halls[3] = { Hall(1), Hall(2), Hall(3) };
+	// already defined (do not load from file)
+	Hall halls[3] = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
+
 	Event events[2] =
 	{
-		Event("2020-08-08", "testEvent", Hall(1)),
-		Event("2020-08-08", "testEvent", Hall(2))
-	};
-	Ticket tickets[2] =
-	{
-		Ticket(1, 1, &events[1]),
-		Ticket(1, 1, &events[0]),
+		Event("2020-08-08", "testEvent",  Hall(1, 5, 5)),
+		Event("2020-08-08", "testEvent", Hall(2, 4, 4))
 	};
 
-	std::ofstream hallsBin{ "halls.bin", std::ios::binary };
-	this->writer->writeBinary(halls, std::cend(halls), hallsBin);
 
-	std::ofstream eventsBin{ "events.bin", std::ios::binary };
-	this->writer->writeBinary(events, std::cend(events), eventsBin);
+	//std::ofstream eventsBin{ "events.bin", std::ios::binary };
+	//this->writer->writeBinary(events, std::cend(events), eventsBin);
 
-	std::ofstream ticketsBin{ "tickets.bin", std::ios::binary };
-	this->writer->writeBinary(tickets, std::cend(tickets), ticketsBin);
-
-	// close streams
+	// close streams ? 
 }
 

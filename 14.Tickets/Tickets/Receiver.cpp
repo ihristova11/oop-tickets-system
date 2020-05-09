@@ -51,7 +51,7 @@ Ticket* Receiver::getTicket(const int& row, const int& seat,
 	const std::string& date, const std::string& name)
 {
 	Ticket* found = nullptr;
-	for (size_t i = 0; i < this->tickets.size(); i++)
+	/*for (size_t i = 0; i < this->tickets.size(); i++)
 	{
 		if (this->tickets[i].row == row
 			&& this->tickets[i].seat == seat
@@ -60,7 +60,7 @@ Ticket* Receiver::getTicket(const int& row, const int& seat,
 		{
 			found = &this->tickets[i];
 		}
-	}
+	}*/
 	return found;
 }
 
@@ -91,27 +91,27 @@ void Receiver::buyTicket(const int& row, const int& seat,
 	Event* event = this->getEvent(date, name);
 	// check if the seat is free
 
-	if (event != nullptr)
-	{
-		for (size_t i = 0; i < this->tickets.size(); i++)
-		{
-			if (this->tickets[i].event == event
-				&& this->tickets[i].row == row
-				&& this->tickets[i].seat == seat)
-			{
-				// can't buy this ticket
-				throw "This seat is not free";
-			}
-		}
-		Ticket t = Ticket(row, seat, event);
-		t.type = TicketType::PURCHASED;
+	//if (event != nullptr)
+	//{
+	//	for (size_t i = 0; i < this->tickets.size(); i++)
+	//	{
+	//		if (this->tickets[i].event == event
+	//			&& this->tickets[i].row == row
+	//			&& this->tickets[i].seat == seat)
+	//		{
+	//			// can't buy this ticket
+	//			throw "This seat is not free";
+	//		}
+	//	}
+	//	Ticket t = Ticket(row, seat, event);
+	//	t.type = TicketType::PURCHASED;
 
-		this->tickets.push_back(t);
-	}
-	else
-	{
-		// no such event, can't sell tickets for it
-	}
+	//	this->tickets.push_back(t);
+	//}
+	//else
+	//{
+	//	// no such event, can't sell tickets for it
+	//}
 }
 
 void Receiver::copyInternals(const Receiver& other)

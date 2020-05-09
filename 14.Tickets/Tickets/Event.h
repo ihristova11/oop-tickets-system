@@ -2,17 +2,20 @@
 #define EVENT_H
 
 #include <string>
+
 #include "Hall.h"
+#include "Ticket.h"
 class Event
 {
 public:
 	Event();
 	Event(const std::string&, const std::string&, const Hall&);
+	Event(const std::string&, const std::string&, const Hall&, std::vector<Ticket>&);
 
-	// not sure if public is ok?
 	std::string name;
-	std::string date; // todo: refactor
+	std::string date; // todo: refactor ? 
 	Hall hall;
+	std::vector<Ticket> tickets;
 
 
 	int getFreeSeats();

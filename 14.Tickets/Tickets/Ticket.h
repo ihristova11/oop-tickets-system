@@ -4,19 +4,17 @@
 #include <string>
 #include <iostream>
 
-#include "Event.h"
 #include "TicketType.h"
 
 class Ticket
 {
 public:
 	Ticket();
-	Ticket(const int&, const int&, Event*);
+	Ticket(const int&, const int&);
 	Ticket(const Ticket&);
 	Ticket& operator=(const Ticket&);
 
 	std::string code;
-	Event* event;
 	std::string note;
 	int row;
 	int seat;

@@ -7,13 +7,15 @@
 #include <iterator>
 #include "ICommand.h"
 #include "ICommandParser.h"
+#include "FileReader.h"
 
 class CommandParser : public ICommandParser
 {
 public:
-	CommandParser(Receiver*);
+	CommandParser(Receiver*, FileReader*);
 
 	Receiver* receiver;
+	FileReader* reader;
 
 	virtual ICommand* parseCommand(const std::string&) override;
 	virtual std::vector<std::string> parseParameters(const std::string&) override;
