@@ -18,7 +18,7 @@ public:
 	std::vector<Event> events;
 
 	// improve these | as .Select(x=>x./...)
-	Hall* getHallWithId(const int&);
+	Hall getHallWithId(const int&);
 	Event* getEvent(const std::string&, const std::string&);
 	Ticket* getTicket(const int&, const int&, const std::string&, const std::string&);
 

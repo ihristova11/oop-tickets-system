@@ -17,16 +17,16 @@ Receiver& Receiver::operator=(const Receiver& other)
 	return *this;
 }
 
-Hall* Receiver::getHallWithId(const int& hallId)
+Hall Receiver::getHallWithId(const int& hallId)
 {
-	Hall* hall = nullptr;
+	Hall hall;
 
 	//find hall with that name
 	for (size_t i = 0; i < this->halls.size(); i++)
 	{
 		if (this->halls[i].id == hallId) // what if there is no such hall?
 		{
-			hall = &(this->halls[i]);
+			hall = this->halls[i];
 			break;
 		}
 	}

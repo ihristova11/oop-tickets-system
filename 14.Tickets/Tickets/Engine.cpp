@@ -33,6 +33,9 @@ void Engine::start()
 
 		if (commandString == "exit")
 			break;
+
+		// check if file is successfully opened, if not break;
+		//if(commandString.find(Constants::OpenCommandName) != std::string::npos)
 	}
 }
 

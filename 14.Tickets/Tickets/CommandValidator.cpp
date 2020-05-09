@@ -3,7 +3,7 @@
 bool CommandValidator::isValidDate(std::string)
 {
 	// todo: implement it
-	return false;
+	return true;
 }
 
 bool CommandValidator::isValidInputFile(std::string file)
