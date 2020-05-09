@@ -11,6 +11,9 @@ public:
 	Event();
 	Event(const std::string&, const std::string&, const Hall&);
 	Event(const std::string&, const std::string&, const Hall&, std::vector<Ticket>&);
+	Event(const Event&);
+	Event& operator=(const Event&);
+
 	~Event(); // update this
 
 	std::string name;
@@ -20,6 +23,9 @@ public:
 
 
 	int getFreeSeats();
+
+private:
+	void copyInternals(const Event&);
 };
 
 #endif // !EVENT_H

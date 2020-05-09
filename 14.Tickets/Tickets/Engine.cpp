@@ -21,7 +21,7 @@ Engine::~Engine()
 
 void Engine::start()
 {
-	this->seed(); // for testing purposes
+	//this->seed(); // for testing purposes
 
 	while (true)
 	{

@@ -11,6 +11,7 @@
 #include "HelpCommand.h"
 #include "PopularEventsCommand.h"
 #include "ExitCommand.h"
+#include "OpenCommand.h"
 
 CommandParser::CommandParser(Receiver* receiver, FileReader* reader)
 	: receiver(receiver), reader(reader)
@@ -53,6 +54,7 @@ void CommandParser::seedCommands()
 
 	this->commands.push_back(new HelpCommand(this->receiver));
 	this->commands.push_back(new ExitCommand(this->receiver));
+	this->commands.push_back(new OpenCommand(this->receiver, this->reader));
 }
 
 template <typename T>

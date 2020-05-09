@@ -114,6 +114,9 @@
     <ClCompile Include="PopularEventsCommand.cpp">
       <Filter>Source Files\Commands</Filter>
     </ClCompile>
+    <ClCompile Include="CommandValidator.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddEventCommand.h">
@@ -198,6 +201,9 @@
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="CommandParser.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandValidator.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
   </ItemGroup>

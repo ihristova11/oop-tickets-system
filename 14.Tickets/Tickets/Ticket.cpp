@@ -29,6 +29,7 @@ void Ticket::print(std::ostream& out)
 
 void Ticket::copyInternals(const Ticket& other)
 {
+	this->code = other.code;
 	this->note = other.note;
 	this->row = other.row;
 	this->seat = other.seat;
