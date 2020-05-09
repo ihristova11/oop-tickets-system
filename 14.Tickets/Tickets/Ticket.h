@@ -13,6 +13,8 @@ public:
 	Ticket(const int&, const int&);
 	Ticket(const Ticket&);
 	Ticket& operator=(const Ticket&);
+	// not gonna need a destructor
+
 
 	std::string code;
 	std::string note;

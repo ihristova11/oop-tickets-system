@@ -28,14 +28,8 @@
     <Filter Include="Source Files\Commands\FileCommands">
       <UniqueIdentifier>{d80801ca-fafc-4553-8221-4437a7fafcdf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\CommandParser">
-      <UniqueIdentifier>{9d48029e-58bf-404a-b66c-624f8a90157c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Engine">
       <UniqueIdentifier>{654b45f0-b7cd-4778-82e6-7f4171dc089d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\CommandParser">
-      <UniqueIdentifier>{769c7ad8-8a46-4968-84fa-eaaa259c94e8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Engine">
       <UniqueIdentifier>{d664c9a3-457b-4af9-8010-0cf8be30f416}</UniqueIdentifier>
@@ -50,7 +44,7 @@
       <UniqueIdentifier>{c6ba9c0b-33f9-4ce8-884c-3c9b86cb148b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Utils">
-      <UniqueIdentifier>{6286013c-be59-459f-968c-35d97a55d8e8}</UniqueIdentifier>
+      <UniqueIdentifier>{769c7ad8-8a46-4968-84fa-eaaa259c94e8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -100,7 +94,7 @@
       <Filter>Source Files\Commands\FileCommands</Filter>
     </ClCompile>
     <ClCompile Include="CommandParser.cpp">
-      <Filter>Source Files\CommandParser</Filter>
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
       <Filter>Source Files\Engine</Filter>
@@ -119,12 +113,6 @@
     </ClCompile>
     <ClCompile Include="PopularEventsCommand.cpp">
       <Filter>Source Files\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="FileReader.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="FileWriter.cpp">
-      <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -176,12 +164,6 @@
     <ClInclude Include="ICommand.h">
       <Filter>Header Files\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="ICommandParser.h">
-      <Filter>Header Files\CommandParser</Filter>
-    </ClInclude>
-    <ClInclude Include="CommandParser.h">
-      <Filter>Header Files\CommandParser</Filter>
-    </ClInclude>
     <ClInclude Include="Engine.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
@@ -210,6 +192,12 @@
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="FileWriter.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommandParser.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandParser.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
   </ItemGroup>

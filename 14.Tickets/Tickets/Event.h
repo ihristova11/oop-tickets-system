@@ -11,6 +11,7 @@ public:
 	Event();
 	Event(const std::string&, const std::string&, const Hall&);
 	Event(const std::string&, const std::string&, const Hall&, std::vector<Ticket>&);
+	~Event(); // update this
 
 	std::string name;
 	std::string date; // todo: refactor ? 

@@ -4,7 +4,7 @@
 #include "ICommand.h"
 class SaveCommand : public ICommand
 {
-	// Inherited via ICommand
+public:
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

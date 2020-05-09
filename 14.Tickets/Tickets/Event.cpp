@@ -11,6 +11,12 @@ Event::Event(const std::string& name, const std::string& date, const Hall& hall,
 	: name(name), date(date), hall(hall), tickets(tickets)
 { }
 
+Event::~Event()
+{
+	/*delete &hall;
+	delete[]tickets;*/
+}
+
 int Event::getFreeSeats()
 {
 	//this->hall // get free seats in a hall ( should maintain a record for that)

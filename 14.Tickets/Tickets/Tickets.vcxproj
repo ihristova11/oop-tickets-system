@@ -161,8 +161,6 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="ExitCommand.cpp" />
-    <ClCompile Include="FileReader.cpp" />
-    <ClCompile Include="FileWriter.cpp" />
     <ClCompile Include="FreeSeatsCommand.cpp" />
     <ClCompile Include="Hall.cpp" />
     <ClCompile Include="HelpCommand.cpp" />

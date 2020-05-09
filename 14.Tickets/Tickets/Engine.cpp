@@ -62,18 +62,23 @@ void Engine::seed()
 {
 	// for testing purposes
 	// already defined (do not load from file)
-	Hall halls[3] = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
+	this->receiver.halls = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
+
+	// for testing purposes | DELETE LATER
+	// update names
+	std::vector<Ticket> tickets1 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
+	std::vector<Ticket> tickets2 = { Ticket(1,1), Ticket(2,2), Ticket(3,3) };
 
 	Event events[2] =
 	{
-		Event("2020-08-08", "testEvent",  Hall(1, 5, 5)),
-		Event("2020-08-08", "testEvent", Hall(2, 4, 4))
+		Event("2020-08-08", "testEvent",  Hall(1, 5, 5), tickets1),
+		Event("2020-08-08", "testEvent", Hall(2, 4, 4), tickets2)
 	};
 
+	// in writer or not?
+	std::ofstream eventsBin{ "events.bin", std::ios::binary };
+	this->writer->write(events, std::cend(events), eventsBin);
 
-	//std::ofstream eventsBin{ "events.bin", std::ios::binary };
-	//this->writer->writeBinary(events, std::cend(events), eventsBin);
-
-	// close streams ? 
+	eventsBin.close();
 }
 

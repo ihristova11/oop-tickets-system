@@ -6,8 +6,17 @@
 class FileWriter
 {
 public:
+	//std::ofstream& out; ?
+
+
+	//https://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file
+	//https://www.youtube.com/watch?v=IiMr1jAQB78
 	template <typename T>
-	void writeBinary(const T* first, const T* last, std::ostream& out);
+	void write(const T* first, const T* last, std::ofstream& out)
+	{
+
+		out.write(reinterpret_cast<const char*>(first), (last - first) * sizeof(T));
+	}
 };
 
 #endif // !FILE_WRITER_H
