@@ -74,9 +74,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acdc2c892927c849df7413228f0bc4e25"><td class="memItemLeft" align="right" valign="top"><a id="acdc2c892927c849df7413228f0bc4e25"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Ticket</b> (const int &amp;, const int &amp;, <a class="el" href="class_event.html">Event</a> *)</td></tr>
-<tr class="separator:acdc2c892927c849df7413228f0bc4e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265522624ff92f3d39553ac31a10b429"><td class="memItemLeft" align="right" valign="top"><a id="a265522624ff92f3d39553ac31a10b429"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Ticket</b> (const int &amp;, const int &amp;, const int &amp;, const std::string &amp;)</td></tr>
+<tr class="separator:a265522624ff92f3d39553ac31a10b429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04b0d0de544b520906c7cf11e500f71"><td class="memItemLeft" align="right" valign="top"><a id="aa04b0d0de544b520906c7cf11e500f71"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Ticket</b> (const int &amp;, const int &amp;, const int &amp;, const std::string &amp;, const TicketType &amp;)</td></tr>
+<tr class="separator:aa04b0d0de544b520906c7cf11e500f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae88635db6ebf2625ab799f32f8bfbb11"><td class="memItemLeft" align="right" valign="top"><a id="ae88635db6ebf2625ab799f32f8bfbb11"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Ticket</b> (const int &amp;, const int &amp;, const int &amp;, const std::string &amp;, const TicketType &amp;, const std::string &amp;)</td></tr>
+<tr class="separator:ae88635db6ebf2625ab799f32f8bfbb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a425a21bbd741dbeb7b73752f09190712"><td class="memItemLeft" align="right" valign="top"><a id="a425a21bbd741dbeb7b73752f09190712"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Ticket</b> (const <a class="el" href="class_ticket.html">Ticket</a> &amp;)</td></tr>
 <tr class="separator:a425a21bbd741dbeb7b73752f09190712"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,9 +98,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a414e7a5d461fccb07a3451af2608c272"><td class="memItemLeft" align="right" valign="top"><a id="a414e7a5d461fccb07a3451af2608c272"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>code</b></td></tr>
 <tr class="separator:a414e7a5d461fccb07a3451af2608c272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd6aa79a2f68f72ef4b25267d5de2816"><td class="memItemLeft" align="right" valign="top"><a id="afd6aa79a2f68f72ef4b25267d5de2816"></a>
-<a class="el" href="class_event.html">Event</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>event</b></td></tr>
-<tr class="separator:afd6aa79a2f68f72ef4b25267d5de2816"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ca813005c856d40569756a4620139e"><td class="memItemLeft" align="right" valign="top"><a id="ab7ca813005c856d40569756a4620139e"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>note</b></td></tr>
 <tr class="separator:ab7ca813005c856d40569756a4620139e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,6 +107,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
 <tr class="memitem:a0e721f9d14e04471b65264c22403b202"><td class="memItemLeft" align="right" valign="top"><a id="a0e721f9d14e04471b65264c22403b202"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>seat</b></td></tr>
 <tr class="separator:a0e721f9d14e04471b65264c22403b202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052a650d4d272644b6a95f8a5470c56c"><td class="memItemLeft" align="right" valign="top"><a id="a052a650d4d272644b6a95f8a5470c56c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>hallId</b></td></tr>
+<tr class="separator:a052a650d4d272644b6a95f8a5470c56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942cb410826c32862ec57843950f4dfc"><td class="memItemLeft" align="right" valign="top"><a id="a942cb410826c32862ec57843950f4dfc"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>date</b></td></tr>
+<tr class="separator:a942cb410826c32862ec57843950f4dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a7c5ef2bb121e428e90cc88a329384"><td class="memItemLeft" align="right" valign="top"><a id="aa7a7c5ef2bb121e428e90cc88a329384"></a>
 TicketType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
 <tr class="separator:aa7a7c5ef2bb121e428e90cc88a329384"><td class="memSeparator" colspan="2">&#160;</td></tr>

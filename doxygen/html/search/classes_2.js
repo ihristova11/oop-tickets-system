@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['checkcommand_30',['CheckCommand',['../class_check_command.html',1,'']]],
-  ['closecommand_31',['CloseCommand',['../class_close_command.html',1,'']]],
-  ['commandparser_32',['CommandParser',['../class_command_parser.html',1,'']]]
+  ['checkcommand_31',['CheckCommand',['../class_check_command.html',1,'']]],
+  ['closecommand_32',['CloseCommand',['../class_close_command.html',1,'']]],
+  ['commandparser_33',['CommandParser',['../class_command_parser.html',1,'']]],
+  ['commandvalidator_34',['CommandValidator',['../class_command_validator.html',1,'']]]
 ];
