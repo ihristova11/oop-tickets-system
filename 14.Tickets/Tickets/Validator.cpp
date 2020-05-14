@@ -1,12 +1,12 @@
-#include "CommandValidator.h"
+#include "Validator.h"
 
-bool CommandValidator::isValidDate(std::string)
+bool Validator::isValidDate(std::string)
 {
 	// todo: implement it
 	return true;
 }
 
-bool CommandValidator::isValidInputFile(std::string file)
+bool Validator::isValidInputFile(std::string file)
 {
 	int size = file.size();
 	std::string res = "";

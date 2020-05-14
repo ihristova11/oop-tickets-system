@@ -1,13 +1,14 @@
 #ifndef BOOKINGS_COMMAND_H
 #define BOOKINGS_COMMAND_H
 #include "ICommand.h"
-#include "CommandValidator.h"
+#include "Validator.h"
 class BookingsCommand : public ICommand
 {
 public: 
-	BookingsCommand(Store*, CommandValidator*);
+	BookingsCommand(Store*);
+
 	Store* store;
-	CommandValidator* validator;
+
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

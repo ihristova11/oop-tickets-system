@@ -1,7 +1,6 @@
 #include "BookCommand.h"
 
-BookCommand::BookCommand(Store* store, CommandValidator* validator)
-	: store(store), validator(validator)
+BookCommand::BookCommand(Store* store) : store(store)
 { }
 
 std::string BookCommand::execute(const std::vector<std::string>& parameters)
@@ -13,13 +12,13 @@ std::string BookCommand::execute(const std::vector<std::string>& parameters)
 	std::string name = parameters[4];
 	std::string note = parameters[5];
 
-	if (validator->isValidDate(date) && this->store->eventExists(date, name)
+	if (Validator::isValidDate(date) && this->store->eventExists(date, name)
 		&& this->store->isAvailableSeat(date, name, row, seat))
 	{
 		Event* found = this->store->getEvent(date, name);
 		found->tickets
 			.push_back(Ticket(row, seat, found->hall.id, found->date, TicketType::RESERVED, note));
-		this->store->tickets.push_back(Ticket(row, seat, 
+		this->store->tickets.push_back(Ticket(row, seat,
 			found->hall.id, found->date, TicketType::RESERVED, note));
 		return Constants::Success;
 	}

@@ -3,14 +3,13 @@
 
 #include "ICommand.h"
 #include "FileReader.h"
-#include "CommandValidator.h"
+#include "Validator.h"
 
 class OpenCommand : public ICommand
 {
 public:
-	OpenCommand(Store*, FileReader*, CommandValidator*);
+	OpenCommand(Store*, FileReader*);
 
-	CommandValidator* validator; // base class
 	Store* store; // base class
 	FileReader* reader;
 	

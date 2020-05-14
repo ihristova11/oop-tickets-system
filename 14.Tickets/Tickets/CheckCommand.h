@@ -2,15 +2,15 @@
 #define CHECK_COMMAND_H
 
 #include "ICommand.h"
-#include "CommandValidator.h"
+#include "Validator.h"
 
 class CheckCommand : public ICommand
 {
 public: 
-	CheckCommand(Store*, CommandValidator*);
+	CheckCommand(Store*);
 
 	Store* store;
-	CommandValidator* validator;
+
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

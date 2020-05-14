@@ -42,21 +42,20 @@ std::vector<std::string> CommandParser::parseParameters(const std::string& fullC
 void CommandParser::seedCommands()
 {
 	// register commands
-	this->commands.push_back(new AddEventCommand(this->store,
-		this->reader, &this->validator));
+	this->commands.push_back(new AddEventCommand(this->store, this->reader));
 	this->commands.push_back(new FreeSeatsCommand(this->store));
-	this->commands.push_back(new BookCommand(this->store, &this->validator));
-	this->commands.push_back(new UnbookCommand(this->store, &this->validator));
-	this->commands.push_back(new BuyCommand(this->store, &this->validator));
-	this->commands.push_back(new BookingsCommand(this->store, &this->validator));
-	this->commands.push_back(new CheckCommand(this->store, &this->validator));
+	this->commands.push_back(new BookCommand(this->store));
+	this->commands.push_back(new UnbookCommand(this->store));
+	this->commands.push_back(new BuyCommand(this->store));
+	this->commands.push_back(new BookingsCommand(this->store));
+	this->commands.push_back(new CheckCommand(this->store));
 	this->commands.push_back(new ReportCommand(this->store));
 	this->commands.push_back(new PopularEventsCommand(this->store));
 
 	this->commands.push_back(new HelpCommand(this->store));
 	this->commands.push_back(new ExitCommand(this->store));
 	this->commands.push_back(new OpenCommand(this->store,
-		this->reader, &this->validator));
+		this->reader));
 }
 
 template <typename T>

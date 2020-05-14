@@ -1,7 +1,6 @@
 #include "BuyCommand.h"
 
-BuyCommand::BuyCommand(Store* store, CommandValidator* validator)
-	: store(store), validator(validator)
+BuyCommand::BuyCommand(Store* store) : store(store)
 { }
 
 std::string BuyCommand::execute(const std::vector<std::string>& parameters)
@@ -12,7 +11,7 @@ std::string BuyCommand::execute(const std::vector<std::string>& parameters)
 	std::string date = parameters[3];
 	std::string name = parameters[4];
 
-	if (validator->isValidDate(date) && this->store->eventExists(date, name))
+	if (Validator::isValidDate(date) && this->store->eventExists(date, name))
 	{
 		int ind = this->store->getTicketInd(this->store->tickets, date, name, row, seat);
 		if (ind != -1)

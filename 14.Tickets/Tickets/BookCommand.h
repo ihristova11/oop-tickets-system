@@ -2,16 +2,16 @@
 #define BOOK_COMMAND_H
 
 #include<vector>
+
 #include "ICommand.h"
-#include "CommandValidator.h"
+#include "Validator.h"
 
 class BookCommand : public ICommand
 {
 public:
-	BookCommand(Store*, CommandValidator*);
+	BookCommand(Store*);
 
 	Store* store;
-	CommandValidator* validator;
 
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;

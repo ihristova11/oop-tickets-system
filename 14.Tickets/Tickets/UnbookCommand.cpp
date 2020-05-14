@@ -1,7 +1,6 @@
 #include "UnbookCommand.h"
 
-UnbookCommand::UnbookCommand(Store* store, CommandValidator* validator)
-	: store(store), validator(validator)
+UnbookCommand::UnbookCommand(Store* store) : store(store)
 { }
 
 std::string UnbookCommand::execute(const std::vector<std::string>& parameters)
@@ -13,7 +12,7 @@ std::string UnbookCommand::execute(const std::vector<std::string>& parameters)
 	std::string date = parameters[3];
 	std::string name = parameters[4];
 
-	if (validator->isValidDate(date) && this->store->getEvent(date, name) != nullptr
+	if (Validator::isValidDate(date) && this->store->getEvent(date, name) != nullptr
 		&& this->store->getTicketInd(this->store->getEvent(date, name)->tickets,
 			date, name, row, seat) != -1)
 	{

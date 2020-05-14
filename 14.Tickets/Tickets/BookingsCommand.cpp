@@ -1,13 +1,12 @@
 #include "BookingsCommand.h"
 
-BookingsCommand::BookingsCommand(Store* store, CommandValidator* validator) 
-	: store(store), validator(validator)
+BookingsCommand::BookingsCommand(Store* store) : store(store)
 { }
 
 std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 {
-	 //validator
-	// refactor duplicate code
+	//validator
+   // refactor duplicate code
 	if (parameters.size() == 3)
 	{
 		std::string date = parameters[1];
@@ -38,7 +37,7 @@ std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 	{
 		std::string input = parameters[1];
 		// check for name
-		if (!validator->isValidDate(input))
+		if (!Validator::isValidDate(input))
 		{
 			for (size_t i = 0; i < this->store->events.size(); i++)
 			{
