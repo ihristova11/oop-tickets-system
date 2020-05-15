@@ -23,6 +23,7 @@ public:
 
 
 	int getFreeSeats();
+	void print(std::ostream&);
 
 private:
 	void copyInternals(const Event&);

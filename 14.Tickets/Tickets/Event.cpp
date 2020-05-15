@@ -37,6 +37,11 @@ int Event::getFreeSeats()
 	return 0;
 }
 
+void Event::print(std::ostream& out)
+{
+	out << this->date << " " << this->name << std::endl;
+}
+
 void Event::copyInternals(const Event& other)
 {
 	this->name = other.name;

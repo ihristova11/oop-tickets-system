@@ -23,7 +23,7 @@ namespace Constants
 	const std::string ExitCommandName = "exit";
 
 	const std::string NoHall = "No such hall exists!";
-
+	const std::string EnterCommand = "Enter a command: ";
 	const std::string Success = "Command completed successfully!";
 	const std::string Error = "Something's wrong with your command, try again!";
 

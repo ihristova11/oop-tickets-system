@@ -30,6 +30,7 @@ void Engine::start()
 	{
 		std::string commandString;
 		// read the command here
+		std::cout << Constants::EnterCommand;
 		std::getline(std::cin, commandString);
 
 		// can start with open command only
