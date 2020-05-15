@@ -2,28 +2,31 @@
 #define ENGINE_H
 
 #include <string>
-#include "IEngine.h"
 #include "ICommandParser.h"
 #include "Hall.h"
 #include "FileWriter.h"
 #include "FileReader.h"
 
-class Engine : public IEngine
+class Engine
 {
 public:
-	Engine();
-	virtual ~Engine();
+	Engine(const Engine&) = delete;
+	Engine& operator=(const Engine&) = delete;
+
+	static Engine& getInstance();
 	Store store;
 	
-	virtual void start() override;
+	virtual void start();
 private:
+	Engine();
+	virtual ~Engine();
 
 	std::vector<ICommand*> commands;
 	ICommandParser* parser;
 	FileWriter* writer;
 	FileReader* reader;
 
-	void processCommand(std::string commandAsString);
+	void processCommand(std::string);
 	void seed();
 };
 

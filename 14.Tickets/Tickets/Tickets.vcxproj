@@ -197,7 +197,6 @@
     <ClInclude Include="ICommand.h" />
     <ClInclude Include="FreeSeatsCommand.h" />
     <ClInclude Include="ICommandParser.h" />
-    <ClInclude Include="IEngine.h" />
     <ClInclude Include="OpenCommand.h" />
     <ClInclude Include="PopularEventsCommand.h" />
     <ClInclude Include="Store.h" />

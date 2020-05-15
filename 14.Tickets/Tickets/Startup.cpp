@@ -1,12 +1,10 @@
 #include <iostream>
 
-#include "IEngine.h"
 #include "Engine.h"
 
 int main()
 {
-	IEngine* engine = new Engine();
-	engine->start();
+	Engine::getInstance().start();
 	
 	return 0;
 }
