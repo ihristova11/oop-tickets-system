@@ -13,8 +13,7 @@ Engine::Engine()
 
 Engine& Engine::getInstance()
 {
-	static Engine instance; // Guaranteed to be destroyed.
-						  // Instantiated on first use.
+	static Engine instance;
 	return instance;
 }
 
@@ -27,21 +26,32 @@ Engine::~Engine()
 
 void Engine::start()
 {
-	this->seed(); // for testing purposes
-
 	while (true)
 	{
 		std::string commandString;
 		// read the command here
 		std::getline(std::cin, commandString);
 
+		// can start with open command only
+		if ((this->parser)->parseCommand(commandString) != nullptr
+			&& (this->parser)->parseCommand(commandString)->toString()
+			!= Constants::OpenCommandName
+			&& begin)
+		{
+			std::cout << Constants::OpenCommandOnly << std::endl;
+			continue;
+		}
+				
 		this->processCommand(commandString);
 
-		if (commandString == "exit")
+		if ((this->parser)->parseCommand(commandString) != nullptr
+			&& (this->parser)->parseCommand(commandString)->toString()
+			== Constants::ExitCommandName)
+		{
 			break;
+		}
 
-		// check if file is successfully opened, if not break;
-		//if(commandString.find(Constants::OpenCommandName) != std::string::npos)
+		//TODO: CANNOT OPEN FILE AGAIN RIGHT AFTER OPENING A FILE
 	}
 }
 
@@ -58,33 +68,19 @@ void Engine::processCommand(std::string commandAsString)
 
 	if (command != nullptr)
 	{
-		std::string executionResult = command->execute(parameters);
-		std::cout << executionResult << std::endl;
+		if (begin && command->toString() != Constants::OpenCommandName)
+		{
+			std::cout << Constants::OpenCommandOnly << std::endl;
+		}
+		else
+		{			
+			std::string executionResult = command->execute(parameters);
+			std::cout << executionResult << std::endl;
+			this->begin = command->toString() == Constants::CloseCommandName;
+		}
 	}
 	else
 	{
-		std::cout << Constants::Error << std::endl;
+		std::cout << Constants::InvalidCommand << std::endl;
 	}
 }
-
-void Engine::seed()
-{
-	// for testing purposes
-	// already defined (do not load from file)
-	this->store.halls = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
-
-	//// for testing purposes | DELETE LATER
-	//// update names
-	//std::vector<Ticket> tickets1 = { Ticket(1,1, 1, "2020-08-08"), Ticket(2,2, 2, "2020-08-08"), Ticket(3,3, 2, "2020-08-08") };
-	//std::vector<Ticket> tickets2 = { Ticket(1,1, 1, "2020-08-09"), Ticket(2,2, 2, "2020-08-09"), Ticket(3,3, 3, "2020-08-09") };
-
-	//std::vector<Event> events =
-	//{
-	//	Event("2020-08-08", "testEvent",  Hall(1, 5, 5), tickets1),
-	//	Event("2020-08-08", "testEvent", Hall(2, 4, 4), tickets2)
-	//};
-
-	//// in writer or not?
-	//this->writer->write("events.txt", events);
-}
-

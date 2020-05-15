@@ -31,6 +31,7 @@ public:
 	Ticket* getTicketByCode(const std::string&);
 private:
 	void copyInternals(const Store&);
+	void seed();
 };
 
 #endif // !store_H

@@ -12,6 +12,7 @@
 #include "PopularEventsCommand.h"
 #include "ExitCommand.h"
 #include "OpenCommand.h"
+#include "CloseCommand.h"
 
 CommandParser::CommandParser(Store* store, FileReader* reader)
 	: store(store), reader(reader)
@@ -54,8 +55,8 @@ void CommandParser::seedCommands()
 
 	this->commands.push_back(new HelpCommand(this->store));
 	this->commands.push_back(new ExitCommand(this->store));
-	this->commands.push_back(new OpenCommand(this->store,
-		this->reader));
+	this->commands.push_back(new OpenCommand(this->store, this->reader));
+	this->commands.push_back(new CloseCommand(this->store));
 }
 
 template <typename T>

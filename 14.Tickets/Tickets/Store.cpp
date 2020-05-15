@@ -1,7 +1,9 @@
 #include "Store.h"
 
 Store::Store() // todo
-{ }
+{
+	this->seed();
+}
 
 Store::Store(const Store& other)
 {
@@ -123,11 +125,31 @@ Ticket* Store::getTicketByCode(const std::string& code)
 	return nullptr;
 }
 
-
-
 void Store::copyInternals(const Store& other)
 {
 	this->halls = other.halls;
 	this->events = other.events;
 	this->tickets = other.tickets;
+}
+
+void Store::seed()
+{
+	this->halls = { Hall(1, 5, 5), Hall(2, 4, 4), Hall(3, 3, 3) };
+
+	// for testing purposes
+	// already defined (do not load from file)
+
+	//// for testing purposes | DELETE LATER
+	//// update names
+	//std::vector<Ticket> tickets1 = { Ticket(1,1, 1, "2020-08-08"), Ticket(2,2, 2, "2020-08-08"), Ticket(3,3, 2, "2020-08-08") };
+	//std::vector<Ticket> tickets2 = { Ticket(1,1, 1, "2020-08-09"), Ticket(2,2, 2, "2020-08-09"), Ticket(3,3, 3, "2020-08-09") };
+
+	//std::vector<Event> events =
+	//{
+	//	Event("2020-08-08", "testEvent",  Hall(1, 5, 5), tickets1),
+	//	Event("2020-08-08", "testEvent", Hall(2, 4, 4), tickets2)
+	//};
+
+	//// in writer or not?
+	//this->writer->write("events.txt", events);
 }

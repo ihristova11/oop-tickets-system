@@ -26,8 +26,9 @@ private:
 	FileWriter* writer;
 	FileReader* reader;
 
+	bool begin = true;
+
 	void processCommand(std::string);
-	void seed();
 };
 
 #endif // !ENGINE_H

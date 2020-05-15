@@ -8,6 +8,7 @@ AddEventCommand::AddEventCommand(Store* store, FileReader* reader) :
 
 std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 {
+	// validate parameters len
 	std::string date = parameters[1];
 	int hallId = std::stoi(parameters[2]);
 	std::string name = parameters[3];

@@ -1,10 +1,15 @@
 #include "CloseCommand.h"
 
+CloseCommand::CloseCommand(Store* store) : store(store)
+{ }
+
 std::string CloseCommand::execute(const std::vector<std::string>& parameters)
 {
-	std::string file = parameters[1]; // check if valid file
+	// no parameters to validate
+	// delete only the events and tickets in the store
 
-	// delete store->halls
+	store->events.clear();
+	store->tickets.clear();
 
 	return Constants::CloseSuccess;
 }
