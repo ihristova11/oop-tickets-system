@@ -2,10 +2,10 @@
 #include "Hall.h"
 #include "Event.h"
 
-AddEventCommand::AddEventCommand(Store* _store, FileReader* reader) :
+AddEventCommand::AddEventCommand(Store* store, FileReader* reader) :
 	reader(reader)
 {
-	store = _store;
+	ICommand::store = store;
 }
 
 std::string AddEventCommand::execute(const std::vector<std::string>& parameters)

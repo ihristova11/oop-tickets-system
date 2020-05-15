@@ -19,9 +19,9 @@ Engine& Engine::getInstance()
 
 Engine::~Engine()
 {
-	delete this->writer;
-	delete this->reader;
-	delete this->parser;
+	delete writer;
+	delete reader;
+	delete parser;
 }
 
 void Engine::start()

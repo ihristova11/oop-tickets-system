@@ -22,6 +22,14 @@ CommandParser::CommandParser(Store* store, FileReader* reader, FileWriter* write
 	seedCommands();
 }
 
+CommandParser::~CommandParser()
+{
+	// delete commands
+	
+	this->commands.clear(); // calls destructor for all commands
+	std::cout << "Command parser destructor called!" << std::endl;
+}
+
 ICommand* CommandParser::parseCommand(const std::string& fullCommand)
 {
 	std::string commandName = this->split(fullCommand, ' ')[0];

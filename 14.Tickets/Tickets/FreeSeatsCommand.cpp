@@ -7,6 +7,7 @@ FreeSeatsCommand::FreeSeatsCommand(Store* store)
 
 std::string FreeSeatsCommand::execute(const std::vector<std::string>& parameters)
 {
+
 	return Constants::Success;
 }
 
