@@ -1,7 +1,9 @@
 #include "UnbookCommand.h"
 
-UnbookCommand::UnbookCommand(Store* store) : store(store)
-{ }
+UnbookCommand::UnbookCommand(Store* store)
+{
+	ICommand::store = store;
+}
 
 std::string UnbookCommand::execute(const std::vector<std::string>& parameters)
 {

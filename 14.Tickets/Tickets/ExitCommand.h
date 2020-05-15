@@ -7,7 +7,6 @@ class ExitCommand : public ICommand
 public:
 	ExitCommand(Store*);
 
-	Store* store;
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

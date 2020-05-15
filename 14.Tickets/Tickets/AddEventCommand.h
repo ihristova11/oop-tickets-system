@@ -12,11 +12,10 @@ class AddEventCommand : public ICommand
 public:
 	AddEventCommand(Store*, FileReader*);
 
-	Store* store;
-	FileReader* reader;
-
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
+private:
+	FileReader* reader;
 };
 
 #endif // !ADD_EVENT_COMMAND_H

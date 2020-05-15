@@ -1,7 +1,9 @@
 #include "CheckCommand.h"
 
-CheckCommand::CheckCommand(Store* store) : store(store)
-{ }
+CheckCommand::CheckCommand(Store* store)
+{
+	ICommand::store = store;
+}
 
 std::string CheckCommand::execute(const std::vector<std::string>& parameters)
 {

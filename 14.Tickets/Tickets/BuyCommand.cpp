@@ -1,7 +1,9 @@
 #include "BuyCommand.h"
 
-BuyCommand::BuyCommand(Store* store) : store(store)
-{ }
+BuyCommand::BuyCommand(Store* store)
+{ 
+	ICommand::store = store;
+}
 
 std::string BuyCommand::execute(const std::vector<std::string>& parameters)
 {

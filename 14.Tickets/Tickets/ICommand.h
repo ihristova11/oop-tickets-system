@@ -10,6 +10,8 @@
 class ICommand
 {
 public:
+	Store* store;
+
 	virtual std::string execute(const std::vector<std::string>&) = 0;
 	virtual std::string toString() = 0;
 };

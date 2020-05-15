@@ -13,9 +13,7 @@ public:
 	Engine(const Engine&) = delete;
 	Engine& operator=(const Engine&) = delete;
 
-	static Engine& getInstance();
-	Store store;
-	
+	static Engine& getInstance();	
 	virtual void start();
 private:
 	Engine();
@@ -25,7 +23,7 @@ private:
 	ICommandParser* parser;
 	FileWriter* writer;
 	FileReader* reader;
-
+	Store store;
 	bool begin = true;
 
 	void processCommand(std::string);

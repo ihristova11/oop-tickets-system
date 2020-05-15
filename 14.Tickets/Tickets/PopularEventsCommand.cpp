@@ -1,8 +1,9 @@
 #include "PopularEventsCommand.h"
 
-PopularEventsCommand::PopularEventsCommand(Store* store) 
-	: store(store)
-{ }
+PopularEventsCommand::PopularEventsCommand(Store* store)
+{
+	ICommand::store = store;
+}
 
 std::string PopularEventsCommand::execute(const std::vector<std::string>&)
 {

@@ -1,7 +1,9 @@
 #include "BookingsCommand.h"
 
-BookingsCommand::BookingsCommand(Store* store) : store(store)
-{ }
+BookingsCommand::BookingsCommand(Store* store)
+{
+	ICommand::store = store;
+}
 
 std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 {

@@ -1,7 +1,9 @@
 #include "ReportCommand.h"
 
-ReportCommand::ReportCommand(Store* store) : store(store)
-{ }
+ReportCommand::ReportCommand(Store* store)
+{
+	ICommand::store = store;
+}
 
 std::string ReportCommand::execute(const std::vector<std::string>& parameters)
 {

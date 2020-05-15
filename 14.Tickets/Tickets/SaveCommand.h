@@ -5,6 +5,8 @@
 class SaveCommand : public ICommand
 {
 public:
+	SaveCommand(Store*);
+
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

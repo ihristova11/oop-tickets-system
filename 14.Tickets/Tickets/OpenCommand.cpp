@@ -1,12 +1,13 @@
 #include "OpenCommand.h"
 
-OpenCommand::OpenCommand(Store* store, FileReader* reader)
-	: store(store), reader(reader)
-{ }
+OpenCommand::OpenCommand(Store* store, FileReader* reader) : reader(reader)
+{
+	ICommand::store = store;
+}
 
 std::string OpenCommand::execute(const std::vector<std::string>& parameters)
 {
-	std::string fileName = parameters[1]; 
+	std::string fileName = parameters[1];
 	if (Validator::isValidInputFile(fileName)) //.txt files only
 	{
 		this->reader->read(fileName, this->store->events);

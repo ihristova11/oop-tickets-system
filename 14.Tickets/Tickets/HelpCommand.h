@@ -6,7 +6,6 @@ class HelpCommand : public ICommand
 {
 public:
 	HelpCommand(Store*);
-	Store* store;
 
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;

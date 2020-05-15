@@ -8,7 +8,6 @@ class UnbookCommand : public ICommand
 public:
 	UnbookCommand(Store*);
 
-	Store* store;
 	virtual std::string execute(const std::vector<std::string>&) override;
 	virtual std::string toString() override;
 };

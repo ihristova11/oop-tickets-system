@@ -1,7 +1,9 @@
 #include "BookCommand.h"
 
-BookCommand::BookCommand(Store* store) : store(store)
-{ }
+BookCommand::BookCommand(Store* store)
+{
+	ICommand::store = store;
+}
 
 std::string BookCommand::execute(const std::vector<std::string>& parameters)
 {
