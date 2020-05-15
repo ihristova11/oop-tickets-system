@@ -17,7 +17,7 @@ Store& Store::operator=(const Store& other)
 	return *this;
 }
 
-Hall Store::getHallWithId(const int& hallId)
+Hall Store::getHallWithId(const int& hallId) const
 {
 	Hall hall;
 
@@ -34,7 +34,7 @@ Hall Store::getHallWithId(const int& hallId)
 	return hall;
 }
 
-bool Store::hallExists(const int& hallId)
+bool Store::hallExists(const int& hallId) const
 {
 	int len = this->halls.size();
 	for (size_t i = 0; i < len; i++)
@@ -47,7 +47,7 @@ bool Store::hallExists(const int& hallId)
 	return false;
 }
 
-bool Store::hallFree(const std::string& date, const int& hallId)
+bool Store::hallFree(const std::string& date, const int& hallId) const
 {
 	for (size_t i = 0; i < this->events.size(); i++)
 	{
@@ -97,7 +97,7 @@ Event* Store::getEvent(const std::string& date, const std::string& name)
 }
 
 int Store::getTicketInd(std::vector<Ticket>& store, const std::string& date,
-	const std::string& name, const int& row, const int& seat)
+	const std::string& name, const int& row, const int& seat) const
 {
 	int len = store.size();
 	for (size_t i = 0; i < len; i++)
