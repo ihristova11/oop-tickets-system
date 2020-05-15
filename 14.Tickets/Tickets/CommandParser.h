@@ -5,6 +5,7 @@
 #include <vector>
 #include <sstream>
 #include <iterator>
+
 #include "ICommand.h"
 #include "ICommandParser.h"
 #include "FileReader.h"
