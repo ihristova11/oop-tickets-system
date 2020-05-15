@@ -9,7 +9,6 @@
 #include "CheckCommand.h"
 #include "ReportCommand.h"
 #include "HelpCommand.h"
-#include "PopularEventsCommand.h"
 #include "ExitCommand.h"
 #include "OpenCommand.h"
 #include "CloseCommand.h"
@@ -61,7 +60,6 @@ void CommandParser::seedCommands()
 	this->commands.push_back(new BookingsCommand(this->store));
 	this->commands.push_back(new CheckCommand(this->store));
 	this->commands.push_back(new ReportCommand(this->store));
-	this->commands.push_back(new PopularEventsCommand(this->store));
 
 	this->commands.push_back(new HelpCommand(this->store));
 	this->commands.push_back(new ExitCommand(this->store));

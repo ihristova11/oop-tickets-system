@@ -108,9 +108,6 @@
     <ClCompile Include="Ticket.cpp">
       <Filter>Source Files\Models</Filter>
     </ClCompile>
-    <ClCompile Include="PopularEventsCommand.cpp">
-      <Filter>Source Files\Commands</Filter>
-    </ClCompile>
     <ClCompile Include="FileReader.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
@@ -187,9 +184,6 @@
     </ClInclude>
     <ClInclude Include="TicketType.h">
       <Filter>Header Files\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="PopularEventsCommand.h">
-      <Filter>Header Files\Commands</Filter>
     </ClInclude>
     <ClInclude Include="FileReader.h">
       <Filter>Header Files\Utils</Filter>

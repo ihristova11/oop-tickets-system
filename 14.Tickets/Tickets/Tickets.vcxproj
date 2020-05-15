@@ -168,7 +168,6 @@
     <ClCompile Include="Hall.cpp" />
     <ClCompile Include="HelpCommand.cpp" />
     <ClCompile Include="OpenCommand.cpp" />
-    <ClCompile Include="PopularEventsCommand.cpp" />
     <ClCompile Include="Store.cpp" />
     <ClCompile Include="ReportCommand.cpp" />
     <ClCompile Include="SaveAsCommand.cpp" />
@@ -198,7 +197,6 @@
     <ClInclude Include="FreeSeatsCommand.h" />
     <ClInclude Include="ICommandParser.h" />
     <ClInclude Include="OpenCommand.h" />
-    <ClInclude Include="PopularEventsCommand.h" />
     <ClInclude Include="Store.h" />
     <ClInclude Include="ReportCommand.h" />
     <ClInclude Include="SaveAsCommand.h" />
