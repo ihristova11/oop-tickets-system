@@ -7,19 +7,22 @@ SaveAsCommand::SaveAsCommand(Store* store, FileWriter* writer) : writer(writer)
 
 std::string SaveAsCommand::execute(const std::vector<std::string>& parameters)
 {
-	//todo: validate number of parameters
-	std::string fileName = parameters[1];
+	bool error = true;
+	if (Validator::isValidParametersCount(2, parameters.size()))
+	{
+		std::string fileName = parameters[1];
 
-	//validate filename
-	if (Validator::isValidInputFile(fileName))
-	{
-		this->writer->write(this->writer->lastFile, this->store->events);
+		//validate filename
+		if (Validator::isValidInputFile(fileName))
+		{
+			error = false;
+			this->writer->write(this->writer->lastFile, this->store->events);
+			return Constants::Success;
+		}
+		else { return Constants::InvalidFileName; }
 	}
-	else
-	{
-		return Constants::InvalidFileName;
-	}
-	return Constants::Success;
+
+	if (error) { return Constants::InvalidParameters; }
 }
 
 std::string SaveAsCommand::toString()

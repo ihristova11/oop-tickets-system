@@ -13,7 +13,7 @@ public:
 	virtual std::string execute(const std::vector<std::string>&) = 0;
 	virtual std::string toString() = 0;
 protected:
-	Store* store;
+	Store* store = nullptr;
 };
 
 #endif // !ICOMMAND_H

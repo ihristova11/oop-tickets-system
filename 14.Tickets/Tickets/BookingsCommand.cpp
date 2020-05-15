@@ -8,71 +8,73 @@ BookingsCommand::BookingsCommand(Store* store)
 std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 {
 	//validator
-   // refactor duplicate code
-	if (parameters.size() == 3)
+	int paramSize = parameters.size();
+	if (Validator::isMinParametersCount(paramSize, 2))
 	{
-		std::string date = parameters[1];
-		std::string name = parameters[2];
-		Event* found = this->store->getEvent(date, name);
-		for (size_t i = 0; i < found->tickets.size(); i++)
+		if (parameters.size() == 3)
 		{
-			if (found->tickets[i].type == TicketType::RESERVED)
+			std::string date = parameters[1];
+			std::string name = parameters[2];
+			Event* found = this->store->getEvent(date, name);
+			for (Ticket ticket : found->tickets)
 			{
-				found->tickets[i].print(std::cout);
-			}
-		}
-	}
-	else if (parameters.size() == 1)
-	{
-		for (size_t i = 0; i < this->store->events.size(); i++)
-		{
-			for (size_t j = 0; j < this->store->events[i].tickets.size(); j++)
-			{
-				if (this->store->events[i].tickets[j].type == TicketType::RESERVED)
+				if (ticket.type == TicketType::RESERVED)
 				{
-					this->store->events[i].tickets[j].print(std::cout);
+					ticket.print(std::cout);
 				}
 			}
 		}
-	}
-	else if (parameters.size() == 2)
-	{
-		std::string input = parameters[1];
-		// check for name
-		if (!Validator::isValidDate(input))
+		else if (parameters.size() == 1)
 		{
-			for (size_t i = 0; i < this->store->events.size(); i++)
+			for (Event e : this->store->events)
 			{
-				if (this->store->events[i].name == input)
+				for (Ticket ticket : e.tickets)
 				{
-					for (size_t j = 0; j < this->store->events[i].tickets.size(); j++)
+					if (ticket.type == TicketType::RESERVED)
 					{
-						if (this->store->events[i].tickets[j].type == TicketType::RESERVED)
+						ticket.print(std::cout);
+					}
+				}
+			}
+		}
+		else if (parameters.size() == 2) // check for name
+		{
+			std::string input = parameters[1];
+			// check for name
+			if (!Validator::isValidDate(input))
+			{
+				for (Event e : this->store->events)
+				{
+					if (e.name == input)
+					{
+						for (Ticket ticket : e.tickets)
 						{
-							this->store->events[i].tickets[j].print(std::cout);
+							if (ticket.type == TicketType::RESERVED)
+							{
+								ticket.print(std::cout);
+							}
+						}
+					}
+				}
+			}
+			else // valid date? - check for date
+			{
+				for (Event e : this->store->events)
+				{
+					if (e.date == input)
+					{
+						for (Ticket ticket: e.tickets)
+						{
+							if (ticket.type == TicketType::RESERVED)
+							{
+								ticket.print(std::cout);
+							}
 						}
 					}
 				}
 			}
 		}
-		else // valid date? - check for date
-		{
-			for (size_t i = 0; i < this->store->events.size(); i++)
-			{
-				if (this->store->events[i].date == input)
-				{
-					for (size_t j = 0; j < this->store->events[i].tickets.size(); j++)
-					{
-						if (this->store->events[i].tickets[j].type == TicketType::RESERVED)
-						{
-							this->store->events[i].tickets[j].print(std::cout);
-						}
-					}
-				}
-			}
-		}
 	}
-
 	return Constants::Success;
 }
 

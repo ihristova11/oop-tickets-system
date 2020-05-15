@@ -8,18 +8,22 @@ OpenCommand::OpenCommand(Store* store, FileReader* reader, FileWriter* writer)
 
 std::string OpenCommand::execute(const std::vector<std::string>& parameters)
 {
-	std::string fileName = parameters[1];
-	if (Validator::isValidInputFile(fileName)) //.txt files only
+	bool error = true;
+	if (Validator::isValidParametersCount(2, parameters.size()))
 	{
-		this->reader->read(fileName, this->store->events);
-		this->addTickets();
-		this->updateLastFile(fileName);
-		return Constants::Success;
+		std::string fileName = parameters[1];
+		if (Validator::isValidInputFile(fileName)) //.txt files only
+		{
+			error = false;
+			this->reader->read(fileName, this->store->events);
+			this->addTickets();
+			this->updateLastFile(fileName);
+			return Constants::Success;
+		}
 	}
-	else
-	{
-		return Constants::Error; // update with useful error message
-	}
+
+	if (error)
+		return Constants::InvalidParameters;
 }
 
 std::string OpenCommand::toString()

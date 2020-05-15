@@ -10,19 +10,25 @@ AddEventCommand::AddEventCommand(Store* store, FileReader* reader) :
 
 std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 {
-	// validate parameters len
-	std::string date = parameters[1];
-	int hallId = std::stoi(parameters[2]);
-	std::string name = parameters[3];
-
-	if (Validator::isValidDate(date) && this->store->hallExists(hallId)
-		&& this->store->hallFree(date, hallId))
+	if (Validator::isValidParametersCount(4, parameters.size()))
 	{
-		Hall hall = this->store->getHallWithId(hallId);
-		Event newEvent = Event(name, date, hall);
-		this->store->events.push_back(newEvent);
+		std::string date = parameters[1];
+			int hallId = std::stoi(parameters[2]);
+			std::string name = parameters[3];
 
-		return Constants::Success;
+			if (Validator::isValidDate(date) && this->store->hallExists(hallId)
+				&& this->store->hallFree(date, hallId))
+			{
+				Hall hall = this->store->getHallWithId(hallId);
+					Event newEvent = Event(name, date, hall);
+					this->store->events.push_back(newEvent);
+
+				return Constants::Success;
+			}
+	}
+	else
+	{
+		return Constants::InvalidParameters;
 	}
 
 	return Constants::AddEventError;

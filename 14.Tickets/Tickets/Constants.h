@@ -35,6 +35,7 @@ namespace Constants
 	const std::string OpenCommandOnly = "You should open a file before entering other commands.";
 	const std::string InvalidCommand = "Enter a valid command.";
 	const std::string InvalidFileName = "You can save only txt files.";
+	const std::string InvalidParameters = "Please enter valid parameters.";
 	const std::string ErrorOpeningFile = "The file cannot be opened!";
 	const std::string NoEvent = "No such event found.";
 
@@ -43,5 +44,7 @@ namespace Constants
 	const std::string UnbookError = "There is nothing to unbook! Thank you!";
 	const std::string CheckFound = "This ticket is valid!";
 	const std::string CheckNotFound = "This ticket is not valid!";
+
+	const int MaxSeatRow = 5;
 }
 #endif // !CONSTANTS_H

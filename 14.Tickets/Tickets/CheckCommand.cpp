@@ -7,10 +7,17 @@ CheckCommand::CheckCommand(Store* store)
 
 std::string CheckCommand::execute(const std::vector<std::string>& parameters)
 {
-	std::string ticketCode = parameters[1]; // code
-	if (this->store->getTicketByCode(ticketCode) == nullptr)
+	if (Validator::isMinParametersCount(parameters.size(), 1))
 	{
-		return Constants::CheckNotFound; // cannot find ticket 
+		std::string ticketCode = parameters[1]; // code
+		if (this->store->getTicketByCode(ticketCode) == nullptr)
+		{
+			return Constants::CheckNotFound; // cannot find ticket 
+		}
+	}
+	else
+	{
+		return Constants::InvalidParameters;
 	}
 
 	return Constants::CheckFound;

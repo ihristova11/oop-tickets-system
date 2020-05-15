@@ -7,6 +7,7 @@ ExitCommand::ExitCommand(Store* store)
 
 std::string ExitCommand::execute(const std::vector<std::string>&)
 {
+	// no need for checking the parameters
 	return Constants::ExitResponse;
 }
 
