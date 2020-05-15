@@ -13,9 +13,11 @@
 #include "ExitCommand.h"
 #include "OpenCommand.h"
 #include "CloseCommand.h"
+#include "SaveCommand.h"
+#include "SaveAsCommand.h"
 
-CommandParser::CommandParser(Store* store, FileReader* reader)
-	: store(store), reader(reader)
+CommandParser::CommandParser(Store* store, FileReader* reader, FileWriter* writer)
+	: store(store), reader(reader), writer(writer)
 {
 	seedCommands();
 }
@@ -55,8 +57,10 @@ void CommandParser::seedCommands()
 
 	this->commands.push_back(new HelpCommand(this->store));
 	this->commands.push_back(new ExitCommand(this->store));
-	this->commands.push_back(new OpenCommand(this->store, this->reader));
+	this->commands.push_back(new OpenCommand(this->store, this->reader, this->writer));
 	this->commands.push_back(new CloseCommand(this->store));
+	this->commands.push_back(new SaveCommand(this->store, this->writer));
+	this->commands.push_back(new SaveAsCommand(this->store, this->writer));
 }
 
 template <typename T>

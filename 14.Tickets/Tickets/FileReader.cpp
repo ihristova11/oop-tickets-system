@@ -10,8 +10,8 @@ void FileReader::read(std::string file, std::vector<Event>& arr)
 	{
 		arr.push_back(Event());
 		ifs.ignore();
-		std::getline(ifs, arr[i].date);
 		std::getline(ifs, arr[i].name);
+		std::getline(ifs, arr[i].date);
 		ifs >> arr[i].hall.id;
 		ifs.get();
 		ifs >> arr[i].hall.rows;

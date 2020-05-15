@@ -15,7 +15,7 @@ std::string AddEventCommand::execute(const std::vector<std::string>& parameters)
 	int hallId = std::stoi(parameters[2]);
 	std::string name = parameters[3];
 
-	if (Validator::isValidDate(date) && this->store->hallExists(hallId) 
+	if (Validator::isValidDate(date) && this->store->hallExists(hallId)
 		&& this->store->hallFree(date, hallId))
 	{
 		Hall hall = this->store->getHallWithId(hallId);
