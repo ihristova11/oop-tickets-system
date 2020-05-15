@@ -1,9 +1,34 @@
 #include "Validator.h"
 
-bool Validator::isValidDate(std::string)
+bool Validator::isValidDate(std::string date)
 {
-	// todo: implement it
-	return true;
+	int daysMap[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	if (date.size() == 10)
+	{
+		try
+		{
+			int day, month;
+			std::string y = date.substr(0, 4);
+			std::string m = date.substr(5, 2);
+			std::string d = date.substr(8, 2);
+
+			if (y == "2020" && m != "00" && d != "00")
+			{
+				month = (m.substr(1, 1).compare("0")) ? std::stoi(m.substr(1, 1)) : std::stoi(m);
+				day = (d.substr(1, 1).compare("0")) ? std::stoi(d.substr(1, 1)) : std::stoi(d);
+				if (day <= daysMap[month - 1])
+				{
+					return true;
+				}
+			}
+		}
+		catch (int)
+		{
+			return false;
+		}
+	}
+
+	return false;
 }
 
 bool Validator::isValidInputFile(std::string file)
@@ -40,5 +65,5 @@ bool Validator::validateSeat(const int& seat, const int& seatsPerRow)
 
 bool Validator::validateRow(const int& row, const int& rows)
 {
-	return row < rows && row >= 0;
+	return row < rows&& row >= 0;
 }
