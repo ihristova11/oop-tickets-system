@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tickets: Engine Class Reference</title>
+<title>Tickets: Validator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,35 +64,40 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="class_engine-members.html">List of all members</a>  </div>
+<a href="class_validator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Engine Class Reference</div>  </div>
+<div class="title">Validator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9ee0ddff1237cf61eb482bfce9ab480"><td class="memItemLeft" align="right" valign="top"><a id="ab9ee0ddff1237cf61eb482bfce9ab480"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Engine</b> (const <a class="el" href="class_engine.html">Engine</a> &amp;)=delete</td></tr>
-<tr class="separator:ab9ee0ddff1237cf61eb482bfce9ab480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa47d31dddf21d300e5e0498016bdbf33"><td class="memItemLeft" align="right" valign="top"><a id="aa47d31dddf21d300e5e0498016bdbf33"></a>
-<a class="el" href="class_engine.html">Engine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_engine.html">Engine</a> &amp;)=delete</td></tr>
-<tr class="separator:aa47d31dddf21d300e5e0498016bdbf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8066dd213a03f5420d1bf60f150ca7"><td class="memItemLeft" align="right" valign="top"><a id="a4d8066dd213a03f5420d1bf60f150ca7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
-<tr class="separator:a4d8066dd213a03f5420d1bf60f150ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4fbdd2df29e30dd08de3c285cee8c128"><td class="memItemLeft" align="right" valign="top"><a id="a4fbdd2df29e30dd08de3c285cee8c128"></a>
-static <a class="el" href="class_engine.html">Engine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
-<tr class="separator:a4fbdd2df29e30dd08de3c285cee8c128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de685a1487b176ec4648e4a0916feba"><td class="memItemLeft" align="right" valign="top"><a id="a4de685a1487b176ec4648e4a0916feba"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValidDate</b> (std::string)</td></tr>
+<tr class="separator:a4de685a1487b176ec4648e4a0916feba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b91569a3a61a026f04ef5531af64381"><td class="memItemLeft" align="right" valign="top"><a id="a9b91569a3a61a026f04ef5531af64381"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValidInputFile</b> (std::string)</td></tr>
+<tr class="separator:a9b91569a3a61a026f04ef5531af64381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb93a97c6084a7e0b66a7596bb19e4c7"><td class="memItemLeft" align="right" valign="top"><a id="acb93a97c6084a7e0b66a7596bb19e4c7"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValidParametersCount</b> (const int &amp;, const int &amp;)</td></tr>
+<tr class="separator:acb93a97c6084a7e0b66a7596bb19e4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8bb49e20b18938171082932c38d716"><td class="memItemLeft" align="right" valign="top"><a id="aaa8bb49e20b18938171082932c38d716"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasParameters</b> (const int &amp;)</td></tr>
+<tr class="separator:aaa8bb49e20b18938171082932c38d716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77da1aad12a17fbfa5ca1738d6d21faa"><td class="memItemLeft" align="right" valign="top"><a id="a77da1aad12a17fbfa5ca1738d6d21faa"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMinParametersCount</b> (const int &amp;, const int &amp;)</td></tr>
+<tr class="separator:a77da1aad12a17fbfa5ca1738d6d21faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a444b7baea63095cfda3f050db180dee5"><td class="memItemLeft" align="right" valign="top"><a id="a444b7baea63095cfda3f050db180dee5"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>validateSeat</b> (const int &amp;, const int &amp;)</td></tr>
+<tr class="separator:a444b7baea63095cfda3f050db180dee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7707b2a6a98991da66e05bb3aba3153"><td class="memItemLeft" align="right" valign="top"><a id="ac7707b2a6a98991da66e05bb3aba3153"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>validateRow</b> (const int &amp;, const int &amp;)</td></tr>
+<tr class="separator:ac7707b2a6a98991da66e05bb3aba3153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Git/tickets-system/14.Tickets/Tickets/<a class="el" href="_engine_8h_source.html">Engine.h</a></li>
-<li>D:/Git/tickets-system/14.Tickets/Tickets/Engine.cpp</li>
+<li>D:/Git/tickets-system/14.Tickets/Tickets/<a class="el" href="_validator_8h_source.html">Validator.h</a></li>
+<li>D:/Git/tickets-system/14.Tickets/Tickets/Validator.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

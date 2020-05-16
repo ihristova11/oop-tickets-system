@@ -80,15 +80,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f29438bc26f903b4f92e4e513afe1d7"><td class="memItemLeft" align="right" valign="top"><a id="a7f29438bc26f903b4f92e4e513afe1d7"></a>
 <a class="el" href="class_store.html">Store</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_store.html">Store</a> &amp;)</td></tr>
 <tr class="separator:a7f29438bc26f903b4f92e4e513afe1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240312382d0f8770d2f7a35038b70590"><td class="memItemLeft" align="right" valign="top"><a id="a240312382d0f8770d2f7a35038b70590"></a>
-<a class="el" href="class_hall.html">Hall</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getHallWithId</b> (const int &amp;)</td></tr>
-<tr class="separator:a240312382d0f8770d2f7a35038b70590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a931c91725892b9955b17e93a5380440b"><td class="memItemLeft" align="right" valign="top"><a id="a931c91725892b9955b17e93a5380440b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hallExists</b> (const int &amp;)</td></tr>
-<tr class="separator:a931c91725892b9955b17e93a5380440b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a591f19d64df3b138a104508e2ecd7344"><td class="memItemLeft" align="right" valign="top"><a id="a591f19d64df3b138a104508e2ecd7344"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hallFree</b> (const std::string &amp;, const int &amp;)</td></tr>
-<tr class="separator:a591f19d64df3b138a104508e2ecd7344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c3c398527bb654c83cd9f8986a7707"><td class="memItemLeft" align="right" valign="top"><a id="ad0c3c398527bb654c83cd9f8986a7707"></a>
+<a class="el" href="class_hall.html">Hall</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getHallWithId</b> (const int &amp;) const</td></tr>
+<tr class="separator:ad0c3c398527bb654c83cd9f8986a7707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d41d2ced7dcebe8534b31bfeba45b5"><td class="memItemLeft" align="right" valign="top"><a id="af1d41d2ced7dcebe8534b31bfeba45b5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hallExists</b> (const int &amp;) const</td></tr>
+<tr class="separator:af1d41d2ced7dcebe8534b31bfeba45b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a995825a979d270ec8129f62bf5c9bd0d"><td class="memItemLeft" align="right" valign="top"><a id="a995825a979d270ec8129f62bf5c9bd0d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hallFree</b> (const std::string &amp;, const int &amp;) const</td></tr>
+<tr class="separator:a995825a979d270ec8129f62bf5c9bd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f61791225d4b7e2fda25d2a511849f1"><td class="memItemLeft" align="right" valign="top"><a id="a0f61791225d4b7e2fda25d2a511849f1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>eventExists</b> (const std::string &amp;, const std::string &amp;)</td></tr>
 <tr class="separator:a0f61791225d4b7e2fda25d2a511849f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,9 +98,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAvailableSeat</b> (
 <tr class="memitem:ae7094f6bbe95ea9510637bac2ad19514"><td class="memItemLeft" align="right" valign="top"><a id="ae7094f6bbe95ea9510637bac2ad19514"></a>
 <a class="el" href="class_event.html">Event</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> (const std::string &amp;, const std::string &amp;)</td></tr>
 <tr class="separator:ae7094f6bbe95ea9510637bac2ad19514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93951f8a6a78e3dce285b1e123a893a5"><td class="memItemLeft" align="right" valign="top"><a id="a93951f8a6a78e3dce285b1e123a893a5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getTicketInd</b> (std::vector&lt; <a class="el" href="class_ticket.html">Ticket</a> &gt; &amp;, const std::string &amp;, const std::string &amp;, const int &amp;, const int &amp;)</td></tr>
-<tr class="separator:a93951f8a6a78e3dce285b1e123a893a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bebcc9e53c37ab371b587fd2ca155dd"><td class="memItemLeft" align="right" valign="top"><a id="a6bebcc9e53c37ab371b587fd2ca155dd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getTicketInd</b> (std::vector&lt; <a class="el" href="class_ticket.html">Ticket</a> &gt; &amp;, const std::string &amp;, const std::string &amp;, const int &amp;, const int &amp;) const</td></tr>
+<tr class="separator:a6bebcc9e53c37ab371b587fd2ca155dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b5d5aa9675b295b453892ea576188dc"><td class="memItemLeft" align="right" valign="top"><a id="a8b5d5aa9675b295b453892ea576188dc"></a>
 <a class="el" href="class_ticket.html">Ticket</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getTicketByCode</b> (const std::string &amp;)</td></tr>
 <tr class="separator:a8b5d5aa9675b295b453892ea576188dc"><td class="memSeparator" colspan="2">&#160;</td></tr>

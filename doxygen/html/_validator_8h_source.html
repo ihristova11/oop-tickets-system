@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tickets: D:/Git/tickets-system/14.Tickets/Tickets/UnbookCommand.h Source File</title>
+<title>Tickets: D:/Git/tickets-system/14.Tickets/Tickets/Validator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,28 +68,29 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">UnbookCommand.h</div>  </div>
+<div class="title">Validator.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef UNBOOK_COMMAND_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define UNBOOK_COMMAND_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;ICommand.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Validator.h&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COMMAND_VALIDATOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define COMMAND_VALIDATOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_unbook_command.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_unbook_command.html">UnbookCommand</a> : <span class="keyword">public</span> <a class="code" href="class_i_command.html">ICommand</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_validator.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_validator.html">Validator</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_unbook_command.html">UnbookCommand</a>(<a class="code" href="class_store.html">Store</a>*);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> std::string execute(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> std::string toString() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif // !UNBOOK_COMMAND_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidDate(std::string);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidInputFile(std::string);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidParametersCount(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> hasParameters(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isMinParametersCount(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> validateSeat(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> validateRow(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // !COMMAND_VALIDATOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_i_command_html"><div class="ttname"><a href="class_i_command.html">ICommand</a></div><div class="ttdef"><b>Definition:</b> ICommand.h:11</div></div>
-<div class="ttc" id="aclass_unbook_command_html"><div class="ttname"><a href="class_unbook_command.html">UnbookCommand</a></div><div class="ttdef"><b>Definition:</b> UnbookCommand.h:7</div></div>
-<div class="ttc" id="aclass_store_html"><div class="ttname"><a href="class_store.html">Store</a></div><div class="ttdef"><b>Definition:</b> Store.h:10</div></div>
+<div class="ttc" id="aclass_validator_html"><div class="ttname"><a href="class_validator.html">Validator</a></div><div class="ttdef"><b>Definition:</b> Validator.h:7</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -82,13 +82,14 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_file_writer.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_file_writer.html">FileWriter</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//https://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//https://www.youtube.com/watch?v=IiMr1jAQB78</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//template &lt;typename T&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> write(<span class="keyword">const</span> std::string&amp; file, std::vector&lt;Event&gt;&amp; arr);   </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // !FILE_WRITER_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    std::string lastFile;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//https://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//https://www.youtube.com/watch?v=IiMr1jAQB78</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//template &lt;typename T&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> write(<span class="keyword">const</span> std::string&amp; file, std::vector&lt;Event&gt;&amp; arr);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif // !FILE_WRITER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_file_writer_html"><div class="ttname"><a href="class_file_writer.html">FileWriter</a></div><div class="ttdef"><b>Definition:</b> FileWriter.h:10</div></div>
 <!-- start footer part -->

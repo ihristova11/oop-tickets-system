@@ -90,22 +90,24 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::vector&lt;Ticket&gt; tickets;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::vector&lt;Event&gt; events;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// improve these | as .Select(x=&gt;x./...)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// make this consts</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_hall.html">Hall</a> getHallWithId(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> hallExists(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> hallFree(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_hall.html">Hall</a> getHallWithId(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> hallExists(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> hallFree(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> eventExists(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> isAvailableSeat(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_event.html">Event</a>* getEvent(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;); <span class="comment">// duplicate</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> getTicketInd(std::vector&lt;Ticket&gt;&amp;, <span class="keyword">const</span> std::string&amp;,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;); <span class="comment">// too many params</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_ticket.html">Ticket</a>* getTicketByCode(<span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> copyInternals(<span class="keyword">const</span> <a class="code" href="class_store.html">Store</a>&amp;);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // !store_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> isAvailableSeat(<span class="keyword">const</span> std::string&amp;, </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_event.html">Event</a>* getEvent(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;) ; <span class="comment">// duplicate</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> getTicketInd(std::vector&lt;Ticket&gt;&amp;, <span class="keyword">const</span> std::string&amp;,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;) <span class="keyword">const</span>; <span class="comment">// too many params ? </span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_ticket.html">Ticket</a>* getTicketByCode(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> copyInternals(<span class="keyword">const</span> <a class="code" href="class_store.html">Store</a>&amp;);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> seed();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // !store_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_store_html"><div class="ttname"><a href="class_store.html">Store</a></div><div class="ttdef"><b>Definition:</b> Store.h:10</div></div>
 <div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdef"><b>Definition:</b> Event.h:9</div></div>

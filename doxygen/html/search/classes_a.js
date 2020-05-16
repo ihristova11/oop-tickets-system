@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['saveascommand_49',['SaveAsCommand',['../class_save_as_command.html',1,'']]],
-  ['savecommand_50',['SaveCommand',['../class_save_command.html',1,'']]],
-  ['store_51',['Store',['../class_store.html',1,'']]]
+  ['ticket_47',['Ticket',['../class_ticket.html',1,'']]]
 ];
