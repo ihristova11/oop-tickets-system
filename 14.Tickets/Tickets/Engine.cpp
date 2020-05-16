@@ -33,6 +33,14 @@ void Engine::start()
 		std::cout << Constants::EnterCommand;
 		std::getline(std::cin, commandString);
 
+		if ((this->parser)->parseCommand(commandString) != nullptr
+			&& (this->parser)->parseCommand(commandString)->toString()
+			== Constants::ExitCommandName)
+		{
+			this->processCommand(commandString);
+			break;
+		}
+
 		// can start with open command only
 		if ((this->parser)->parseCommand(commandString) != nullptr
 			&& (this->parser)->parseCommand(commandString)->toString()
@@ -44,15 +52,6 @@ void Engine::start()
 		}
 				
 		this->processCommand(commandString);
-
-		if ((this->parser)->parseCommand(commandString) != nullptr
-			&& (this->parser)->parseCommand(commandString)->toString()
-			== Constants::ExitCommandName)
-		{
-			break;
-		}
-
-		//TODO: CANNOT OPEN FILE AGAIN RIGHT AFTER OPENING A FILE
 	}
 }
 
@@ -69,7 +68,8 @@ void Engine::processCommand(std::string commandAsString)
 
 	if (command != nullptr)
 	{
-		if (begin && command->toString() != Constants::OpenCommandName)
+		if (begin && command->toString() != Constants::OpenCommandName
+			&& command->toString() != Constants::ExitCommandName)
 		{
 			std::cout << Constants::OpenCommandOnly << std::endl;
 		}
