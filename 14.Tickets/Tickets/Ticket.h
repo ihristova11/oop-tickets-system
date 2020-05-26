@@ -6,6 +6,9 @@
 
 #include "TicketType.h"
 
+/// <summary>
+/// Ticket model containing information for code, note, row, seat, hall, date, etc.
+/// </summary>
 class Ticket
 {
 public:
@@ -15,8 +18,6 @@ public:
 	Ticket(const int&, const int&, const int&, const std::string&, const TicketType&, const std::string&);
 	Ticket(const Ticket&);
 	Ticket& operator=(const Ticket&);
-	// not gonna need a destructor
-
 
 	std::string code;
 	std::string note;

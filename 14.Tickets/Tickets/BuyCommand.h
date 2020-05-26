@@ -4,6 +4,9 @@
 #include "ICommand.h"
 #include "Validator.h"
 
+/// <summary>
+/// BuyCommand saves a ticket and sets its status to purchased
+/// </summary>
 class BuyCommand : public ICommand
 {
 public: 

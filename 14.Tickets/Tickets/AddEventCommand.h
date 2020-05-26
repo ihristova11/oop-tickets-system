@@ -5,8 +5,9 @@
 #include "FileReader.h"
 #include "Validator.h"
 
-/** Add an event command that updates the store*/
-
+/// <summary>
+/// AddEventCommand creates a new event with given parameters and saves it to the Store.
+/// </summary>
 class AddEventCommand : public ICommand
 {
 public:

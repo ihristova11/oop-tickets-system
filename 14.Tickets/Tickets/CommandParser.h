@@ -12,6 +12,9 @@
 #include "FileWriter.h"
 #include "Validator.h"
 
+/// <summary>
+/// ICommandParser implementation
+/// </summary>
 class CommandParser : public ICommandParser
 {
 public:

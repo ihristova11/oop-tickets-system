@@ -5,6 +5,10 @@
 
 #include "Hall.h"
 #include "Ticket.h"
+
+/// <summary>
+/// Event model stores information as name, date, hall and tickets
+/// </summary>
 class Event
 {
 public:
@@ -14,15 +18,11 @@ public:
 	Event(const Event&);
 	Event& operator=(const Event&);
 
-	~Event(); // update this
-
 	std::string name;
-	std::string date; // todo: refactor ? 
+	std::string date;
 	Hall hall;
 	std::vector<Ticket> tickets;
 
-
-	int getFreeSeats();
 	void print(std::ostream&);
 
 private:

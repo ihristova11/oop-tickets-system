@@ -2,6 +2,10 @@
 #define BOOKINGS_COMMAND_H
 #include "ICommand.h"
 #include "Validator.h"
+
+/// <summary>
+/// BookingsCommand displays information for booked tickets for a given date and event
+/// </summary>
 class BookingsCommand : public ICommand
 {
 public: 

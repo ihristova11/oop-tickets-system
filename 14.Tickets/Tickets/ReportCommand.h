@@ -3,6 +3,9 @@
 
 #include "ICommand.h"
 
+/// <summary>
+/// ReportCommand displays information for purchased tickets for a given time interval
+/// </summary>
 class ReportCommand : public ICommand
 {
 public: 

@@ -3,6 +3,9 @@
 
 #include <string>
 
+/// <summary>
+/// Namespace containing string constants returned in the process of command execution
+/// </summary>
 namespace Constants
 {
 	const std::string AddEventCommandName = "addevent";

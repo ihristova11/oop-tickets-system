@@ -25,18 +25,6 @@ Event& Event::operator=(const Event& other)
 	return *this;
 }
 
-Event::~Event()
-{
-	/*delete &hall;
-	delete[]tickets;*/
-}
-
-int Event::getFreeSeats()
-{
-	//this->hall // get free seats in a hall ( should maintain a record for that)
-	return 0;
-}
-
 void Event::print(std::ostream& out)
 {
 	out << this->date << " " << this->name << std::endl;

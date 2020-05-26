@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 
+/// <summary>
+/// Hall model stores information for id, rows and seats per row
+/// </summary>
 class Hall
 {
 public:

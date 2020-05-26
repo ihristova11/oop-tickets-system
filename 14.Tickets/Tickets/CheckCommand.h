@@ -4,6 +4,9 @@
 #include "ICommand.h"
 #include "Validator.h"
 
+/// <summary>
+/// CheckCommand does a check if a ticket with a given id is valid
+/// </summary>
 class CheckCommand : public ICommand
 {
 public: 

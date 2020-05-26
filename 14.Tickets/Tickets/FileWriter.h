@@ -6,13 +6,22 @@
 #include <vector>
 #include "Event.h"
 
+/// <summary>
+/// Responsible for writing to .txt files only
+/// </summary>
 class FileWriter
 {
 public:
+	/// <summary>
+	/// stores the last file opened
+	/// </summary>
 	std::string lastFile;
-	//https://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file
-	//https://www.youtube.com/watch?v=IiMr1jAQB78
-	//template <typename T>
+	
+	/// <summary>
+	/// writes to .txt file
+	/// </summary>
+	/// <param name="file">file path</param>
+	/// <param name="arr">vector that stores the information to be written</param>
 	void write(const std::string& file, std::vector<Event>& arr);
 };
 

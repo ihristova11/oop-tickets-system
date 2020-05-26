@@ -6,6 +6,9 @@
 #include "ICommand.h"
 #include "Validator.h"
 
+/// <summary>
+/// BookCommand books a ticket by given parameters
+/// </summary>
 class BookCommand : public ICommand
 {
 public:

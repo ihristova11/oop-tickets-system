@@ -6,6 +6,9 @@
 #include "Ticket.h"
 #include "Event.h"
 
+/// <summary>
+/// Store is used as container for halls, tickets and events data during the program execution
+/// </summary>
 class Store
 {
 public:
@@ -17,8 +20,6 @@ public:
 	std::vector<Ticket> tickets;
 	std::vector<Event> events;
 
-
-	// make this consts
 	Hall getHallWithId(const int&) const;
 	bool hallExists(const int&) const;
 	bool hallFree(const std::string&, const int&) const;
