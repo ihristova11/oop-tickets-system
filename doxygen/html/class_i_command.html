@@ -71,36 +71,41 @@ $(function() {
 <div class="title">ICommand Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_i_command.html" title="ICommand interface to be implemented by different command instances">ICommand</a> interface to be implemented by different command instances  
+ <a href="class_i_command.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_command_8h_source.html">ICommand.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ICommand:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_i_command.png" usemap="#ICommand_map" alt=""/>
   <map id="ICommand_map" name="ICommand_map">
-<area href="class_add_event_command.html" alt="AddEventCommand" shape="rect" coords="135,56,260,80"/>
-<area href="class_book_command.html" alt="BookCommand" shape="rect" coords="135,112,260,136"/>
-<area href="class_bookings_command.html" alt="BookingsCommand" shape="rect" coords="135,168,260,192"/>
-<area href="class_buy_command.html" alt="BuyCommand" shape="rect" coords="135,224,260,248"/>
-<area href="class_check_command.html" alt="CheckCommand" shape="rect" coords="135,280,260,304"/>
-<area href="class_close_command.html" alt="CloseCommand" shape="rect" coords="135,336,260,360"/>
-<area href="class_exit_command.html" alt="ExitCommand" shape="rect" coords="135,392,260,416"/>
-<area href="class_free_seats_command.html" alt="FreeSeatsCommand" shape="rect" coords="135,448,260,472"/>
-<area href="class_help_command.html" alt="HelpCommand" shape="rect" coords="135,504,260,528"/>
-<area href="class_open_command.html" alt="OpenCommand" shape="rect" coords="135,560,260,584"/>
-<area href="class_report_command.html" alt="ReportCommand" shape="rect" coords="135,616,260,640"/>
-<area href="class_save_as_command.html" alt="SaveAsCommand" shape="rect" coords="135,672,260,696"/>
-<area href="class_save_command.html" alt="SaveCommand" shape="rect" coords="135,728,260,752"/>
-<area href="class_unbook_command.html" alt="UnbookCommand" shape="rect" coords="135,784,260,808"/>
+<area href="class_add_event_command.html" title="AddEventCommand creates a new event with given parameters and saves it to the Store." alt="AddEventCommand" shape="rect" coords="135,56,260,80"/>
+<area href="class_book_command.html" title="BookCommand books a ticket by given parameters" alt="BookCommand" shape="rect" coords="135,112,260,136"/>
+<area href="class_bookings_command.html" title="BookingsCommand displays information for booked tickets for a given date and event" alt="BookingsCommand" shape="rect" coords="135,168,260,192"/>
+<area href="class_buy_command.html" title="BuyCommand saves a ticket and sets its status to purchased" alt="BuyCommand" shape="rect" coords="135,224,260,248"/>
+<area href="class_check_command.html" title="CheckCommand does a check if a ticket with a given id is valid" alt="CheckCommand" shape="rect" coords="135,280,260,304"/>
+<area href="class_close_command.html" title="CloseCommand class hold the logic of closing the last document opened." alt="CloseCommand" shape="rect" coords="135,336,260,360"/>
+<area href="class_exit_command.html" title="ExitCommand exits the program without saving changes to the file." alt="ExitCommand" shape="rect" coords="135,392,260,416"/>
+<area href="class_free_seats_command.html" title="FreeSeatsCommand displays information about free tickets on a given date for a particular event" alt="FreeSeatsCommand" shape="rect" coords="135,448,260,472"/>
+<area href="class_help_command.html" title="HelpCommand displays useful message to the user" alt="HelpCommand" shape="rect" coords="135,504,260,528"/>
+<area href="class_open_command.html" title="OpenCommand is used for opening an existing file or creating a new one if such does not exist" alt="OpenCommand" shape="rect" coords="135,560,260,584"/>
+<area href="class_report_command.html" title="ReportCommand displays information for purchased tickets for a given time interval" alt="ReportCommand" shape="rect" coords="135,616,260,640"/>
+<area href="class_save_as_command.html" title="SaveAsCommand saves changes in a different file (should be .txt as well)" alt="SaveAsCommand" shape="rect" coords="135,672,260,696"/>
+<area href="class_save_command.html" title="SaveCommand saves changes in the current file" alt="SaveCommand" shape="rect" coords="135,728,260,752"/>
+<area href="class_unbook_command.html" title="UnbookCommand changes the state of a ticket to nonpurchased" alt="UnbookCommand" shape="rect" coords="135,784,260,808"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a14396725824145bbe47c378cc4b484cd"><td class="memItemLeft" align="right" valign="top"><a id="a14396725824145bbe47c378cc4b484cd"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (const std::vector&lt; std::string &gt; &amp;)=0</td></tr>
+<tr class="memitem:a14396725824145bbe47c378cc4b484cd"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command.html#a14396725824145bbe47c378cc4b484cd">execute</a> (const std::vector&lt; std::string &gt; &amp;)=0</td></tr>
+<tr class="memdesc:a14396725824145bbe47c378cc4b484cd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_i_command.html#a14396725824145bbe47c378cc4b484cd" title="execute() contains command specific execution logic">execute()</a> contains command specific execution logic  <a href="class_i_command.html#a14396725824145bbe47c378cc4b484cd">More...</a><br /></td></tr>
 <tr class="separator:a14396725824145bbe47c378cc4b484cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac042a2d4560ede21e8089173d5c64197"><td class="memItemLeft" align="right" valign="top"><a id="ac042a2d4560ede21e8089173d5c64197"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()=0</td></tr>
+<tr class="memitem:ac042a2d4560ede21e8089173d5c64197"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command.html#ac042a2d4560ede21e8089173d5c64197">toString</a> ()=0</td></tr>
+<tr class="memdesc:ac042a2d4560ede21e8089173d5c64197"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_i_command.html#ac042a2d4560ede21e8089173d5c64197" title="toString() implementation on command class">toString()</a> implementation on command class  <a href="class_i_command.html#ac042a2d4560ede21e8089173d5c64197">More...</a><br /></td></tr>
 <tr class="separator:ac042a2d4560ede21e8089173d5c64197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -109,6 +114,76 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="class_store.html">Store</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>store</b> = nullptr</td></tr>
 <tr class="separator:abc3bfd57ae64bd5026ab8c8e872bdac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_i_command.html" title="ICommand interface to be implemented by different command instances">ICommand</a> interface to be implemented by different command instances </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a14396725824145bbe47c378cc4b484cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14396725824145bbe47c378cc4b484cd">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ICommand::execute </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_command.html#a14396725824145bbe47c378cc4b484cd" title="execute() contains command specific execution logic">execute()</a> contains command specific execution logic </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameters</td><td>vector of string values</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string containing the execution message</dd></dl>
+
+<p>Implemented in <a class="el" href="class_close_command.html#abf36ee0a4a3067583f674237264c95fa">CloseCommand</a>, <a class="el" href="class_exit_command.html#a485af7ceca85d223fa8356ac2c5f2aa8">ExitCommand</a>, <a class="el" href="class_book_command.html#a2a0fd3297582c96e07e8bfd60db678eb">BookCommand</a>, <a class="el" href="class_open_command.html#a20c7bf1ac31b24edf6557f8473bad0fe">OpenCommand</a>, <a class="el" href="class_add_event_command.html#a5937358014bef3fa4478fc246983848b">AddEventCommand</a>, <a class="el" href="class_save_as_command.html#a968e25c29e1de461c78d4d9195c99de7">SaveAsCommand</a>, <a class="el" href="class_buy_command.html#aab58a8220142d93fad4f0858a398393e">BuyCommand</a>, <a class="el" href="class_check_command.html#a8359f9512eabe693e943ec7efaf7da8a">CheckCommand</a>, <a class="el" href="class_save_command.html#a18c8d1b26defe916e4d23789fade2a68">SaveCommand</a>, <a class="el" href="class_bookings_command.html#a3c8fcaae60953b651de17bc824d48c20">BookingsCommand</a>, <a class="el" href="class_help_command.html#ac36110e5524f5504c26bed49aa44b609">HelpCommand</a>, <a class="el" href="class_report_command.html#ab718ecd935035b91897c74aff936b965">ReportCommand</a>, <a class="el" href="class_unbook_command.html#a1abe0676b40e850d15eb7f9b025b0315">UnbookCommand</a>, and <a class="el" href="class_free_seats_command.html#af49921034906115739d65d1b7def9090">FreeSeatsCommand</a>.</p>
+
+</div>
+</div>
+<a id="ac042a2d4560ede21e8089173d5c64197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac042a2d4560ede21e8089173d5c64197">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ICommand::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_command.html#ac042a2d4560ede21e8089173d5c64197" title="toString() implementation on command class">toString()</a> implementation on command class </p>
+<dl class="section return"><dt>Returns</dt><dd>the command name</dd></dl>
+
+<p>Implemented in <a class="el" href="class_close_command.html#abfa15fadccd191927274f80640b83755">CloseCommand</a>, <a class="el" href="class_exit_command.html#a82a532801097f806a780fef5c8098bda">ExitCommand</a>, <a class="el" href="class_book_command.html#a6db74531feb4ae86351437140afd1830">BookCommand</a>, <a class="el" href="class_open_command.html#a5a85e439a1b7b3964d98aa597c00ac55">OpenCommand</a>, <a class="el" href="class_add_event_command.html#a73be2be076be21473518c3a07bfe61fd">AddEventCommand</a>, <a class="el" href="class_save_as_command.html#a5cd03658b6706718e2f38251f23abdcb">SaveAsCommand</a>, <a class="el" href="class_buy_command.html#a2bcb090a05260e7453de13d2e99f195b">BuyCommand</a>, <a class="el" href="class_check_command.html#a34bc135503651ad9d896271c61876538">CheckCommand</a>, <a class="el" href="class_save_command.html#a570383851ecaee140b68e947a6f7cde7">SaveCommand</a>, <a class="el" href="class_bookings_command.html#ae07aa8fe03d280614520b9de5cee421b">BookingsCommand</a>, <a class="el" href="class_help_command.html#a0f15555aa716f27047d6b019d1567355">HelpCommand</a>, <a class="el" href="class_report_command.html#aef225eafa65d9b771d702dab8ee3af0d">ReportCommand</a>, <a class="el" href="class_unbook_command.html#a4a136b991e88fc877b9ea80812bd075c">UnbookCommand</a>, and <a class="el" href="class_free_seats_command.html#ae25b8cdaa98b1fd850bb526831f2e6d1">FreeSeatsCommand</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Git/tickets-system/14.Tickets/Tickets/<a class="el" href="_i_command_8h_source.html">ICommand.h</a></li>
 </ul>

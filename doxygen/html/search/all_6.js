@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['icommand_15',['ICommand',['../class_i_command.html',1,'']]],
-  ['icommandparser_16',['ICommandParser',['../class_i_command_parser.html',1,'']]]
+  ['hall_16',['Hall',['../class_hall.html',1,'']]],
+  ['helpcommand_17',['HelpCommand',['../class_help_command.html',1,'']]]
 ];

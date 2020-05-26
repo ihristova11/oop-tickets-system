@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reportcommand_18',['ReportCommand',['../class_report_command.html',1,'']]]
+  ['lastfile_20',['lastFile',['../class_file_writer.html#a02a84cec6a3e729107d791677daf0815',1,'FileWriter']]]
 ];

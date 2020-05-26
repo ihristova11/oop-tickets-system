@@ -70,13 +70,18 @@ $(function() {
 <div class="title">CheckCommand Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_check_command.html" title="CheckCommand does a check if a ticket with a given id is valid">CheckCommand</a> does a check if a ticket with a given id is valid  
+ <a href="class_check_command.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_check_command_8h_source.html">CheckCommand.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CheckCommand:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_check_command.png" usemap="#CheckCommand_map" alt=""/>
   <map id="CheckCommand_map" name="CheckCommand_map">
-<area href="class_i_command.html" alt="ICommand" shape="rect" coords="0,0,103,24"/>
+<area href="class_i_command.html" title="ICommand interface to be implemented by different command instances" alt="ICommand" shape="rect" coords="0,0,103,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -85,11 +90,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af117d6a0578ddf1e1ee5aee8a3481db0"><td class="memItemLeft" align="right" valign="top"><a id="af117d6a0578ddf1e1ee5aee8a3481db0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CheckCommand</b> (<a class="el" href="class_store.html">Store</a> *)</td></tr>
 <tr class="separator:af117d6a0578ddf1e1ee5aee8a3481db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8359f9512eabe693e943ec7efaf7da8a"><td class="memItemLeft" align="right" valign="top"><a id="a8359f9512eabe693e943ec7efaf7da8a"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (const std::vector&lt; std::string &gt; &amp;) override</td></tr>
+<tr class="memitem:a8359f9512eabe693e943ec7efaf7da8a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_check_command.html#a8359f9512eabe693e943ec7efaf7da8a">execute</a> (const std::vector&lt; std::string &gt; &amp;) override</td></tr>
+<tr class="memdesc:a8359f9512eabe693e943ec7efaf7da8a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_check_command.html#a8359f9512eabe693e943ec7efaf7da8a" title="execute() contains command specific execution logic">execute()</a> contains command specific execution logic  <a href="class_check_command.html#a8359f9512eabe693e943ec7efaf7da8a">More...</a><br /></td></tr>
 <tr class="separator:a8359f9512eabe693e943ec7efaf7da8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34bc135503651ad9d896271c61876538"><td class="memItemLeft" align="right" valign="top"><a id="a34bc135503651ad9d896271c61876538"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () override</td></tr>
+<tr class="memitem:a34bc135503651ad9d896271c61876538"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_check_command.html#a34bc135503651ad9d896271c61876538">toString</a> () override</td></tr>
+<tr class="memdesc:a34bc135503651ad9d896271c61876538"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_check_command.html#a34bc135503651ad9d896271c61876538" title="toString() implementation on command class">toString()</a> implementation on command class  <a href="class_check_command.html#a34bc135503651ad9d896271c61876538">More...</a><br /></td></tr>
 <tr class="separator:a34bc135503651ad9d896271c61876538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -99,6 +104,76 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="class_store.html">Store</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>store</b> = nullptr</td></tr>
 <tr class="separator:abc3bfd57ae64bd5026ab8c8e872bdac5 inherit pro_attribs_class_i_command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_check_command.html" title="CheckCommand does a check if a ticket with a given id is valid">CheckCommand</a> does a check if a ticket with a given id is valid </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8359f9512eabe693e943ec7efaf7da8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8359f9512eabe693e943ec7efaf7da8a">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CheckCommand::execute </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_check_command.html#a8359f9512eabe693e943ec7efaf7da8a" title="execute() contains command specific execution logic">execute()</a> contains command specific execution logic </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameters</td><td>vector of string values</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string containing the execution message</dd></dl>
+
+<p>Implements <a class="el" href="class_i_command.html#a14396725824145bbe47c378cc4b484cd">ICommand</a>.</p>
+
+</div>
+</div>
+<a id="a34bc135503651ad9d896271c61876538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34bc135503651ad9d896271c61876538">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CheckCommand::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_check_command.html#a34bc135503651ad9d896271c61876538" title="toString() implementation on command class">toString()</a> implementation on command class </p>
+<dl class="section return"><dt>Returns</dt><dd>the command name</dd></dl>
+
+<p>Implements <a class="el" href="class_i_command.html#ac042a2d4560ede21e8089173d5c64197">ICommand</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>D:/Git/tickets-system/14.Tickets/Tickets/<a class="el" href="_check_command_8h_source.html">CheckCommand.h</a></li>
 <li>D:/Git/tickets-system/14.Tickets/Tickets/CheckCommand.cpp</li>
