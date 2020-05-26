@@ -21,9 +21,9 @@ std::string BookCommand::execute(const std::vector<std::string>& parameters)
 		{
 			Event* found = this->store->getEvent(date, name);
 			found->tickets
-				.push_back(Ticket(row, seat, found->hall.id, found->date, TicketType::RESERVED, note));
+				.push_back(Ticket(row, seat, found->hall.getId(), found->date, TicketType::RESERVED, note));
 			this->store->tickets.push_back(Ticket(row, seat,
-				found->hall.id, found->date, TicketType::RESERVED, note));
+				found->hall.getId(), found->date, TicketType::RESERVED, note));
 			return Constants::Success;
 		}
 	}

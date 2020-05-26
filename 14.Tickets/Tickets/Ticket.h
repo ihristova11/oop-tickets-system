@@ -19,6 +19,25 @@ public:
 	Ticket(const Ticket&);
 	Ticket& operator=(const Ticket&);
 
+	TicketType getType() const;
+	int getRow() const;
+	int getSeat() const;
+	int getHallId() const;
+	std::string getDate() const;
+	std::string getCode() const;
+	std::string getNote() const;
+
+	void setType(const TicketType&);
+	void setSeat(const int&);
+	void setRow(const int&);
+	void setHallId(const int&);
+	void setCode(const std::string&);
+	void setNote(const std::string&);
+	void setDate(const std::string&);
+
+	void print(std::ostream&);
+
+private:
 	std::string code;
 	std::string note;
 	int row;
@@ -27,7 +46,6 @@ public:
 	std::string date;
 	TicketType type;
 
-	void print(std::ostream&);
 private:
 	void copyInternals(const Ticket&);
 };

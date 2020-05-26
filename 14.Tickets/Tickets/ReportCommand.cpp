@@ -24,7 +24,7 @@ std::string ReportCommand::execute(const std::vector<std::string>& parameters)
 
 				for (Event e : this->store->events)
 				{
-					if (e.hall.id == hallId && e.date >= from && e.date <= to)
+					if (e.hall.getId() == hallId && e.date >= from && e.date <= to)
 					{
 						e.print(std::cout);
 						for (Ticket ticket : e.tickets)
@@ -47,7 +47,7 @@ std::string ReportCommand::execute(const std::vector<std::string>& parameters)
 					std::cout << std::endl;
 					for (Event e : this->store->events)
 					{
-						if (e.hall.id == hall.id && e.date >= from && e.date <= to)
+						if (e.hall.getId() == hall.getId() && e.date >= from && e.date <= to)
 						{
 							e.print(std::cout);
 							for (Ticket ticket : e.tickets)
@@ -58,7 +58,7 @@ std::string ReportCommand::execute(const std::vector<std::string>& parameters)
 						}
 					}
 
-					std::cout << "HallId: " << hall.id << " -> " << count << " tickets" << std::endl;
+					std::cout << "HallId: " << hall.getId() << " -> " << count << " tickets" << std::endl;
 				}
 			}
 		}

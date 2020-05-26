@@ -38,6 +38,76 @@ Ticket& Ticket::operator=(const Ticket& other)
 	return *this;
 }
 
+TicketType Ticket::getType() const
+{
+	return this->type;
+}
+
+int Ticket::getRow() const
+{
+	return this->row;
+}
+
+int Ticket::getSeat() const
+{
+	return this->seat;
+}
+
+int Ticket::getHallId() const
+{
+	return this->hallId;
+}
+
+std::string Ticket::getDate() const
+{
+	return this->date;
+}
+
+std::string Ticket::getCode() const
+{
+	return this->code;
+}
+
+std::string Ticket::getNote() const
+{
+	return this->note;
+}
+
+void Ticket::setType(const TicketType& type)
+{
+	this->type = type;
+}
+
+void Ticket::setSeat(const int& seat)
+{
+	this->seat = seat;
+}
+
+void Ticket::setRow(const int& row)
+{
+	this->row = row;
+}
+
+void Ticket::setHallId(const int& hallId)
+{
+	this->hallId = hallId;
+}
+
+void Ticket::setCode(const std::string& code)
+{
+	this->code = code;
+}
+
+void Ticket::setNote(const std::string& note)
+{
+	this->note = note;
+}
+
+void Ticket::setDate(const std::string& date)
+{
+	this->date = date;
+}
+
 void Ticket::print(std::ostream& out)
 {
 	out << "Ticket: " << this->code << std::endl;

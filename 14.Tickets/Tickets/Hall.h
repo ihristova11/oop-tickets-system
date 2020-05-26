@@ -14,8 +14,16 @@ public:
 	Hall(const int&);
 	Hall(const int&, const int&, const int&);
 	Hall(const Hall&);
-	// destructor is not needed here
+	
+	int getId() const;
+	int getRows() const;
+	int getSeatsPerRow() const;
 
+	void setId(const int&);
+	void setRows(const int&);
+	void setSeatsPerRow(const int&);
+
+private:
 	int id;
 	int rows;
 	int seatsPerRow;

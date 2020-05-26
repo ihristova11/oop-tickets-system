@@ -26,7 +26,7 @@ Hall Store::getHallWithId(const int& hallId) const
 	//find hall with that name
 	for (size_t i = 0; i < this->halls.size(); i++)
 	{
-		if (this->halls[i].id == hallId) // what if there is no such hall?
+		if (this->halls[i].getId() == hallId) // what if there is no such hall?
 		{
 			hall = this->halls[i];
 			break;
@@ -41,7 +41,7 @@ bool Store::hallExists(const int& hallId) const
 	int len = this->halls.size();
 	for (size_t i = 0; i < len; i++)
 	{
-		if (this->halls[i].id == hallId)
+		if (this->halls[i].getId() == hallId)
 		{
 			return true;
 		}
@@ -53,7 +53,7 @@ bool Store::hallFree(const std::string& date, const int& hallId) const
 {
 	for (size_t i = 0; i < this->events.size(); i++)
 	{
-		if (this->events[i].date == date && this->events[i].hall.id == hallId)
+		if (this->events[i].date == date && this->events[i].hall.getId() == hallId)
 		{
 			return false;
 		}
@@ -73,7 +73,7 @@ bool Store::isAvailableSeat(const std::string& date, const std::string& name,
 	if (found == nullptr) return false;
 	for (size_t i = 0; i < found->tickets.size(); i++)
 	{
-		if (found->tickets[i].row == row && found->tickets[i].seat == seat)
+		if (found->tickets[i].getRow() == row && found->tickets[i].getSeat() == seat)
 		{
 			return false;
 		}
@@ -104,8 +104,8 @@ int Store::getTicketInd(std::vector<Ticket>& store, const std::string& date,
 	int len = store.size();
 	for (size_t i = 0; i < len; i++)
 	{
-		if (store[i].seat == seat
-			&& store[i].row == row)
+		if (store[i].getSeat() == seat
+			&& store[i].getRow() == row)
 		{
 			return i;
 		}
@@ -117,7 +117,7 @@ Ticket* Store::getTicketByCode(const std::string& code)
 {
 	for (size_t i = 0; i < this->tickets.size(); i++)
 	{
-		if (this->tickets[i].code == code)
+		if (this->tickets[i].getCode() == code)
 		{
 			return &this->tickets[i];
 		}

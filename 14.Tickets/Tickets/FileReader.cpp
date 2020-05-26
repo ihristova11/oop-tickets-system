@@ -5,10 +5,9 @@ void FileReader::read(std::string file, std::vector<Event>& arr)
 {
 	bool res = true;
 	int events = 0;
+	int input;
+	std::string line;
 	std::fstream ifs;
-
-	// create fstream
-	//check if file with that name -> if not, create a new file and close the stream
 
 	ifs.open(file, std::ios::in);
 	if (ifs)
@@ -20,29 +19,38 @@ void FileReader::read(std::string file, std::vector<Event>& arr)
 			ifs.ignore();
 			std::getline(ifs, arr[i].name);
 			std::getline(ifs, arr[i].date);
-			ifs >> arr[i].hall.id;
+			ifs >> input;
+			arr[i].hall.setId(input);
 			ifs.get();
-			ifs >> arr[i].hall.rows;
+			ifs >> input;
+			arr[i].hall.setRows(input);
 			ifs.get();
-			ifs >> arr[i].hall.seatsPerRow;
+			ifs >> input;
+			arr[i].hall.setSeatsPerRow(input);
 			int tickets = 0;
 			ifs >> tickets;
 			for (size_t j = 0; j < tickets; j++)
 			{
 				arr[i].tickets.push_back(Ticket());
 				ifs.ignore();
-				std::getline(ifs, arr[i].tickets[j].code);
-				std::getline(ifs, arr[i].tickets[j].note);
-				std::getline(ifs, arr[i].tickets[j].date);
-				ifs >> arr[i].tickets[j].row;
+				std::getline(ifs, line);
+				arr[i].tickets[j].setCode(line);
+				std::getline(ifs, line);
+				arr[i].tickets[j].setNote(line);
+				std::getline(ifs, line);
+				arr[i].tickets[j].setDate(line);
+				ifs >> input;
+				arr[i].tickets[j].setRow(input);
 				ifs.get();
-				ifs >> arr[i].tickets[j].seat;
+				ifs >> input;
+				arr[i].tickets[j].setSeat(input);
 				ifs.get();
-				ifs >> arr[i].tickets[j].hallId;
+				ifs >> input;
+				arr[i].tickets[j].setHallId(input);
 				ifs.get();
 				int type = 0;
 				ifs >> type;
-				arr[i].tickets[j].type = static_cast<TicketType>(type);
+				arr[i].tickets[j].setType(static_cast<TicketType>(type));
 			}
 		}
 	}

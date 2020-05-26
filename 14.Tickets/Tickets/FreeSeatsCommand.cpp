@@ -20,13 +20,13 @@ std::string FreeSeatsCommand::execute(const std::vector<std::string>& parameters
 			if (res != nullptr)
 			{
 				// get all places in hall
-				int all = res->hall.rows * res->hall.seatsPerRow;
+				int all = res->hall.getRows() * res->hall.getSeatsPerRow();
 				bool* seats = new bool[all] { 0 };
 				int ind, row, seat;
 				// fill in with non-empty seats
 				for (int i = 0; i < res->tickets.size(); i++)
 				{
-					ind = res->tickets[i].seat + res->tickets[i].row * res->hall.seatsPerRow;
+					ind = res->tickets[i].getSeat() + res->tickets[i].getRow() * res->hall.getSeatsPerRow();
 					seats[ind] = 1;
 				}
 
@@ -36,8 +36,8 @@ std::string FreeSeatsCommand::execute(const std::vector<std::string>& parameters
 				{
 					if (!seats[i])
 					{
-						row = i / res->hall.seatsPerRow;
-						seat = i - row * res->hall.seatsPerRow;
+						row = i / res->hall.getSeatsPerRow();
+						seat = i - row * res->hall.getSeatsPerRow();
 						std::cout << "Row: " << row << " Seat: " << seat << std::endl;
 					}
 				}

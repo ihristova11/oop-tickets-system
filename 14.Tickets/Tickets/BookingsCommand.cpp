@@ -18,7 +18,7 @@ std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 			Event* found = this->store->getEvent(date, name);
 			for (Ticket ticket : found->tickets)
 			{
-				if (ticket.type == TicketType::RESERVED)
+				if (ticket.getType() == TicketType::RESERVED)
 				{
 					ticket.print(std::cout);
 				}
@@ -30,7 +30,7 @@ std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 			{
 				for (Ticket ticket : e.tickets)
 				{
-					if (ticket.type == TicketType::RESERVED)
+					if (ticket.getType() == TicketType::RESERVED)
 					{
 						ticket.print(std::cout);
 					}
@@ -49,7 +49,7 @@ std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 					{
 						for (Ticket ticket : e.tickets)
 						{
-							if (ticket.type == TicketType::RESERVED)
+							if (ticket.getType() == TicketType::RESERVED)
 							{
 								ticket.print(std::cout);
 							}
@@ -65,7 +65,7 @@ std::string BookingsCommand::execute(const std::vector<std::string>& parameters)
 					{
 						for (Ticket ticket: e.tickets)
 						{
-							if (ticket.type == TicketType::RESERVED)
+							if (ticket.getType() == TicketType::RESERVED)
 							{
 								ticket.print(std::cout);
 							}

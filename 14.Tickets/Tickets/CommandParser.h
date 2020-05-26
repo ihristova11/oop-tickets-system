@@ -20,6 +20,7 @@ class CommandParser : public ICommandParser
 public:
 	CommandParser(Store*, FileReader*, FileWriter*);
 	virtual ~CommandParser();
+
 	virtual ICommand* parseCommand(const std::string&) override;
 	virtual std::vector<std::string> parseParameters(const std::string&) override;
 private:
@@ -28,12 +29,27 @@ private:
 	FileReader* reader;
 	FileWriter* writer;
 
+	/// <summary>
+	/// Registers all commands to be used during the program execution
+	/// </summary>
 	void seedCommands();
 
-	// https://stackoverflow.com/questions/236129/how-do-i-iterate-over-the-words-of-a-string
+	/// <summary>
+	/// Template function used to split strings
+	/// </summary>
+	/// <param name="s">a string representation</param>
+	/// <param name="delim">delimiter</param>
+	/// <param name="result"></param>
 	template <typename T>
 	void split(const std::string& s, char delim, T result);
-	std::vector<std::string> split(const std::string& s, char delim);
+
+	/// <summary>
+	/// Helper function for the template split()
+	/// </summary>
+	/// <param name="s">a string representation</param>
+	/// <param name="delim">delimiter</param>
+	/// <returns>std::vector<std::string> with the result</returns>
+		std::vector<std::string> split(const std::string& s, char delim);
 };
 
 #endif // !COMMAND_PARSER_H

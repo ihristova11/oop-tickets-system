@@ -24,18 +24,18 @@ std::string BuyCommand::execute(const std::vector<std::string>& parameters)
 			if (ind != -1)
 			{
 				// change state only
-				this->store->tickets[ind].type = TicketType::PURCHASED;
+				this->store->tickets[ind].setType(TicketType::PURCHASED);
 				int eInd = this->store->getTicketInd(this->store->getEvent(date, name)->tickets, date, name, row, seat);
-				this->store->getEvent(date, name)->tickets[eInd].type = TicketType::PURCHASED;
+				this->store->getEvent(date, name)->tickets[eInd].setType(TicketType::PURCHASED);
 			}
 			else
 			{
 				Event* found = this->store->getEvent(date, name);
 				// add new
 				found->tickets
-					.push_back(Ticket(row, seat, found->hall.id, found->date,
+					.push_back(Ticket(row, seat, found->hall.getId(), found->date,
 						TicketType::PURCHASED));
-				this->store->tickets.push_back(Ticket(row, seat, found->hall.id, found->date,
+				this->store->tickets.push_back(Ticket(row, seat, found->hall.getId(), found->date,
 					TicketType::PURCHASED));
 			}
 		}
