@@ -14,8 +14,8 @@ bool Validator::isValidDate(std::string date)
 
 			if (y == "2020" && m != "00" && d != "00")
 			{
-				month = (m.substr(1, 1).compare("0")) ? std::stoi(m.substr(1, 1)) : std::stoi(m);
-				day = (d.substr(1, 1).compare("0")) ? std::stoi(d.substr(1, 1)) : std::stoi(d);
+				month = (m.substr(0, 1) == "0") ? std::stoi(m.substr(1, 1)) : std::stoi(m);
+				day = (d.substr(0, 1) == "0") ? std::stoi(d.substr(1, 1)) : std::stoi(d);
 				if (day <= daysMap[month - 1])
 				{
 					return true;
