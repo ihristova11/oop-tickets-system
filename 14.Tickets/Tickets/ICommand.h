@@ -7,9 +7,9 @@
 #include <vector>
 #include <string>
 
-	/// <summary>
-	/// ICommand interface to be implemented by different command instances
-	/// </summary>
+/// <summary>
+/// ICommand interface to be implemented by different command instances
+/// </summary>
 class ICommand
 {
 public:
