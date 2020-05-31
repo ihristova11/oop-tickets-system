@@ -1,0 +1,27 @@
+open D:\Git\tickets-system\14.Tickets\Tickets\events.txt // SHOULD BE REPLACED WITH EQUIVELENT LOCATION ON USER'S PC
+
+addevent 2020-05-08 1 TestEvent // NOT WORKING EXAMPLE, VALIDATION WON'T PASS
+
+addevent 2020-05-18 1 TestEvent // WORKING EXAMPLE, VALIDATION WILL PASS
+
+book 1 2 2020-05-08 TestEvent amidaprobvame // NOT WORKING, PLACE IS TAKEN
+
+book 1 2 2020-05-18 TestEvent amidaprobvame // WILL WORK, PLACE IS FREE
+
+bookings 2020-05-18
+
+unbook 1 2 2020-05-18 TestEvent
+
+buy 1 3 2020-05-08 TestEvent
+
+check ticket-2020-08-08-3-3-2
+
+check ticket-2020-08-08-3-3-8
+
+freeseats 2020-08-08 testEvent
+
+report 2020-08-07 2020-08-18
+
+close
+
+exit
